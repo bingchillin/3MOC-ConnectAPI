@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ConnectAPI" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCz-nf-6XA">
+                    <rect key="frame" x="15" y="748" width="363" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0cn-DA-aad"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="S'inscrire">
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                        <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMC-bX-oWF">
+                    <rect key="frame" x="15" y="693" width="363" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="9F4-M3-sAO"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Se connecter">
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                        <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="i1g-hv-dEE">
+                    <rect key="frame" x="75" y="119" width="243" height="140"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonhomme" translatesAutoresizingMaskIntoConstraints="NO" id="kzk-hj-xpI">
+                    <rect key="frame" x="76" y="257" width="240" height="195"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="i1g-hv-dEE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="7Np-ci-CZ1"/>
+                <constraint firstAttribute="bottom" secondItem="kzk-hj-xpI" secondAttribute="bottom" constant="400" id="AlV-8e-RDa"/>
+                <constraint firstItem="i1g-hv-dEE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="Cfs-Mx-2un"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NCz-nf-6XA" secondAttribute="trailing" constant="15" id="J9t-Fw-9c5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kMC-bX-oWF" secondAttribute="trailing" constant="15" id="PND-Az-r8K"/>
+                <constraint firstItem="NCz-nf-6XA" firstAttribute="top" secondItem="kMC-bX-oWF" secondAttribute="bottom" constant="15" id="R6r-aQ-fOp"/>
+                <constraint firstItem="kMC-bX-oWF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="VNT-fj-E1n"/>
+                <constraint firstItem="kzk-hj-xpI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="76" id="VWt-3b-UUM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NCz-nf-6XA" secondAttribute="bottom" constant="30" id="W7V-tj-35l"/>
+                <constraint firstItem="NCz-nf-6XA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="jgS-f6-7A8"/>
+                <constraint firstItem="kzk-hj-xpI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="198" id="ltv-ko-a7m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i1g-hv-dEE" secondAttribute="trailing" constant="75" id="nPM-jm-MWp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kzk-hj-xpI" secondAttribute="trailing" constant="77" id="sfa-hM-OHS"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bonhomme" width="731.6700439453125" height="668.5272216796875"/>
+        <image name="logo" width="280" height="140"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
