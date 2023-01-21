@@ -5,12 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="SignInButton" destination="NCz-nf-6XA" id="kvx-rQ-Rie"/>
+                <outlet property="SignUpButton" destination="NCz-nf-6XA" id="dgk-FN-0wh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,36 +21,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCz-nf-6XA">
-                    <rect key="frame" x="15" y="748" width="363" height="40"/>
+                    <rect key="frame" x="15" y="743" width="363" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="0cn-DA-aad"/>
+                        <constraint firstAttribute="height" constant="45" id="0cn-DA-aad"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="S'inscrire">
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                         <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="toSignUp:" destination="-1" eventType="touchUpInside" id="123-cQ-Wgl"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMC-bX-oWF">
-                    <rect key="frame" x="15" y="693" width="363" height="40"/>
+                    <rect key="frame" x="15" y="683" width="363" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="9F4-M3-sAO"/>
+                        <constraint firstAttribute="height" constant="45" id="9F4-M3-sAO"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Se connecter">
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                         <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="toSignIn:" destination="-1" eventType="touchUpInside" id="fNZ-qn-cVo"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="i1g-hv-dEE">
                     <rect key="frame" x="75" y="119" width="243" height="140"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonhomme" translatesAutoresizingMaskIntoConstraints="NO" id="kzk-hj-xpI">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sport" translatesAutoresizingMaskIntoConstraints="NO" id="kzk-hj-xpI">
                     <rect key="frame" x="76" y="257" width="240" height="195"/>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="i1g-hv-dEE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="7Np-ci-CZ1"/>
                 <constraint firstAttribute="bottom" secondItem="kzk-hj-xpI" secondAttribute="bottom" constant="400" id="AlV-8e-RDa"/>
@@ -69,10 +76,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bonhomme" width="731.6700439453125" height="668.5272216796875"/>
         <image name="logo" width="280" height="140"/>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="sport" width="731.6700439453125" height="668.5272216796875"/>
     </resources>
 </document>
