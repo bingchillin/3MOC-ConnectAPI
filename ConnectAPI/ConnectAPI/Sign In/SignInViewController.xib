@@ -10,6 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="connectionButton" destination="MV4-8d-FnW" id="ZuJ-Ru-kmv"/>
+                <outlet property="mailTextField" destination="xZm-p6-pvc" id="FQE-qA-k4v"/>
+                <outlet property="noAccountLabel" destination="1OF-1u-qUl" id="5hX-3a-usn"/>
+                <outlet property="passwordTextField" destination="dby-cc-bgd" id="Odh-6M-oAd"/>
+                <outlet property="signInDescriptionLabel" destination="Bme-jV-0hl" id="KLP-Q2-79x"/>
+                <outlet property="signInLabel" destination="1cQ-VT-NNa" id="f3a-oq-0uD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,13 +52,16 @@
                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                         <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="handleConnect:" destination="-1" eventType="touchUpInside" id="jaJ-Yl-ELd"/>
+                    </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adresse mail" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZm-p6-pvc">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZm-p6-pvc">
                     <rect key="frame" x="25" y="502" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mot de passe" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dby-cc-bgd">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dby-cc-bgd">
                     <rect key="frame" x="25" y="556" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>

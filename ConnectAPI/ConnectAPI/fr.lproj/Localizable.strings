@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  ConnectAPI
+
+  Created by Thanudi Madawala on 09/02/2023.
+  
+*/
+
+//TAB BAR
+"controllers.tabbar.homepage" = "Accueil";
+"controllers.tabbar.training" = "Entraînement";
+"controllers.tabbar.nutrition" = "Nutrition";
+"controllers.tabbar.favorites" = "Favoris";
+
+//HOME
+"controllers.home.signin" = "Se connecter";
+"controllers.home.signup" = "S'inscrire";
+
+//SIGN IN
+"controllers.signin.signin" = "Connexion";
+"controllers.signin.signinDescription" = "Connectez-vous pour accéder à l'application";
+"controllers.signin.mail" = "Adresse mail";
+"controllers.signin.password" = "Mot de passe";
+"controllers.signin.signinButton" = "Connexion";
+"controllers.signin.noaccount" = "Vous n'avez pas de compte ? Inscrivez-vous";
+
+//SIGN UP
+
+"controllers.signup.welcome" = "Bienvenue chez nous !";
+"controllers.signup.welcomeDescription" = "Laissez-nous vous guider.";
+
+"controllers.signup.name" = "Prénom";
+"controllers.signup.lastname" = "Nom";
+"controllers.signup.mail" = "Entrez votre adresse e-mail";
+"controllers.signup.address" = "Adresse";
+"controllers.signup.city" = "Ville";
+"controllers.signup.zipcode" = "Code postal";
+"controllers.signup.password" = "Mot de passe";
+
+"controllers.signup.signUpButton" = "S'inscrire";
+"controllers.signup.alreadyaccount" = "Vous avez déjà un compte ? Connectez-vous";
+
