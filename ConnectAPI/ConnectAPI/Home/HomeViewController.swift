@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+
     @IBOutlet weak var SignInButton: UIButton!
     @IBOutlet weak var SignUpButton: UIButton!
     
@@ -23,6 +24,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SignUpButton.setTitle(NSLocalizedString("controllers.home.signup", comment: ""), for: .normal)
+        SignInButton.setTitle(NSLocalizedString("controllers.home.signin", comment: ""), for: .normal)
 
     }
 }

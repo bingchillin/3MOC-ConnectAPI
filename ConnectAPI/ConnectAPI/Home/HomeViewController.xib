@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
-                <outlet property="SignInButton" destination="NCz-nf-6XA" id="kvx-rQ-Rie"/>
-                <outlet property="SignUpButton" destination="NCz-nf-6XA" id="dgk-FN-0wh"/>
+                <outlet property="SignInButton" destination="kMC-bX-oWF" id="ZJx-YM-RbU"/>
+                <outlet property="SignUpButton" destination="NCz-nf-6XA" id="Hze-Tr-kp5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,8 +26,7 @@
                         <constraint firstAttribute="height" constant="45" id="0cn-DA-aad"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="S'inscrire">
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <buttonConfiguration key="configuration" style="filled">
                         <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                     <connections>
@@ -40,8 +39,7 @@
                         <constraint firstAttribute="height" constant="45" id="9F4-M3-sAO"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Se connecter">
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <buttonConfiguration key="configuration" style="filled">
                         <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                     <connections>
