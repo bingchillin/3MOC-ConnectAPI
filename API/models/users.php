@@ -17,6 +17,13 @@ class UserModel
 
     public static function create($user)
     {
+        $userExiste = getByEmail($user["email"]);
+
+        if($userExiste){
+          Response::json(404, [], ["success" => false, "error" => "User existe"]);
+          die;
+        }
+        
         $connection = getDatabaseConnection();
         $createUserQuery = $connection->prepare("INSERT INTO users(Nom,Prenom,Pseudo,Mail,Mot_de_passe) VALUES(:Nom,:Prenom,:Pseudo,:Mail,:Mot_de_passe);");
         $createUserQuery->execute($user);

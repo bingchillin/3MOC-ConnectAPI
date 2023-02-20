@@ -2,7 +2,7 @@
 
 require __DIR__ . "/../library/get-database-connection.php";
 
-class IngredientModel
+class ingredientModel
 {
     public static function getAll()
     {
@@ -17,6 +17,13 @@ class IngredientModel
 
     public static function create($ingredient)
     {
+      $ingredientExiste = getByName($ingredient["Nom"])
+
+      if($ingredientExiste){
+        Response::json(404, [], ["success" => false, "error" => "Ingredient existe deja"]);
+        die;
+      }
+
         $connection = getDatabaseConnection();
         $createIngredientQuery = $connection->prepare("INSERT INTO ingredient(libelle,calories) VALUES(:libelle,:calories);");
         $createIngredientQuery->execute($ingredient);

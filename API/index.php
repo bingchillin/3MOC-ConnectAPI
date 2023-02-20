@@ -38,7 +38,7 @@ if ($route === "users") {
     }
 }
 
-//Controller recette
+//Controller recettes
 if ($route === "recettes") {
     if ($method === "GET") {
         include __DIR__ . "/controllers/recettes/get.php";

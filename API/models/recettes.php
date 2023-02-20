@@ -17,6 +17,13 @@ class RecettesModel
 
     public static function create($recette)
     {
+        $recetteExiste = getByName($recette["Nom"])
+
+        if($recetteExiste){
+          Response::json(404, [], ["success" => false, "error" => "Recette existe deja"]);
+          die;
+        }
+
         $connection = getDatabaseConnection();
         $createUserQuery = $connection->prepare("INSERT INTO recettes(Nom,Prenom,Pseudo,Mail,Mot_de_passe) VALUES(:Nom,:Prenom,:Pseudo,:Mail,:Mot_de_passe);");
         $createUserQuery->execute($user);

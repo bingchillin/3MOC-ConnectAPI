@@ -1,0 +1,59 @@
+Tables Users
+Id
+Nom
+Prenom
+Pseudo?
+Mail
+Token
+Mot de passe
+Poids NULL
+Taille NULL
+Calories_Moyen NULL
+Masse Osseuse? NULL
+Masse Musculaire? NULL
+
+Recette
+ID Users
+Nom
+Calories
+Tps recette OU Split en tps cuisson/tps repos/tps preparation
+Categories
+Description NULL
+
+Ingredient_detail
+ID Recette
+Libelle (Nom de l'ingredient) OU ID Ingredient
+Qte (ex: 2 oignons) NULL
+Masse (ex: 500g) NULL
+
+Ingredient
+ID
+Libelle (Nom de l'ingredient)
+calories
+
+Progression
+ID Users
+DATE
+POIDS
+
+
+
+
+
+
+
+USERS
+firstname char not null
+name char not null
+token char
+email char not null
+adress char not null
+city char not null
+cp char not null
+password char not null ASH216
+weight double
+height double
+calorie int
+
+
+Favories
