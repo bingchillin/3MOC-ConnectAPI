@@ -6,8 +6,13 @@ require __DIR__ . "/../../models/recettes.php";
 
 try {
     $json = Request::getJsonBody();
-    RecettesModel::updateById($json);
-    Response::json(200, [], ["success" => true]);
+
+    if(!RecettesModel::getByName($json["name"])){
+      RecettesModel::updateById($json);
+      Response::json(200, [], ["success" => true]);
+    }else{
+      Response::json(200, [], ["erroe" => "Nom de recette deja utilisé"]);
+    }
 } catch (PDOException $exception) {
     Response::json(500, [], ["success" => false, "error" => $exception->getMessage()]);
 }

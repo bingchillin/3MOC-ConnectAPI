@@ -17,15 +17,9 @@ class ingredientModel
 
     public static function create($ingredient)
     {
-      $ingredientExiste = getByName($ingredient["Nom"])
-
-      if($ingredientExiste){
-        Response::json(404, [], ["success" => false, "error" => "Ingredient existe deja"]);
-        die;
-      }
 
         $connection = getDatabaseConnection();
-        $createIngredientQuery = $connection->prepare("INSERT INTO ingredient(libelle,calories) VALUES(:libelle,:calories);");
+        $createIngredientQuery = $connection->prepare("INSERT INTO ingredient(name,calorie) VALUES(:name,:calorie);");
         $createIngredientQuery->execute($ingredient);
     }
 
@@ -48,11 +42,11 @@ class ingredientModel
     public static function getByName($name)
     {
         $connection = getDatabaseConnection();
-        $getIngredientQuery = $connection->prepare("SELECT * FROM ingredient WHERE libelle = :libelle;");
+        $getIngredientQuery = $connection->prepare("SELECT * FROM ingredient WHERE name = :name;");
 
         $getIngredientQuery->execute(
             [
-            "libelle" => $name
+            "name" => $name
             ]
         );
 
@@ -71,13 +65,13 @@ class ingredientModel
     public static function deleteByName($ingredient)
     {
         $connection = getDatabaseConnection();
-        $deleteByNameQuery = $connection->prepare("DELETE FROM ingredient WHERE libelle = :libelle;");
-        $deleteByNameQuery->execute($ingredient);
+        $deleteByNameQuery = $connection->prepare("DELETE FROM ingredient WHERE name = :name;");
+        $deleteByNameQuery->execute($ingredient["name"]);
     }
 
     public static function updateById($json)
     {
-        $allowedColumns = ["Libelle","calories"];
+        $allowedColumns = ["name","calorie"];
         $columns = array_keys($json);
         $set = [];
 
@@ -98,7 +92,7 @@ class ingredientModel
 
     public static function updateByName($json)
     {
-        $allowedColumns = ["Libelle","calories"];
+        $allowedColumns = ["name","calorie"];
         $columns = array_keys($json);
         $set = [];
 
@@ -111,9 +105,9 @@ class ingredientModel
         }
 
         $set = implode(", ", $set);
-        $sql = "UPDATE ingredient SET $set WHERE libelle = :libelle";
+        $sql = "UPDATE ingredient SET $set WHERE name = :name";
         $connection = getDatabaseConnection();
         $query = $connection->prepare($sql);
-        $query->execute($json);
+        $query->execute($json["name"]);
     }
 }

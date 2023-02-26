@@ -98,6 +98,13 @@ if ($route === "ingredient") {
     }
 }
 
+if ($route === "user_recipes") {
+    if ($method === "GET") {
+        include __DIR__ . "/controllers/user_recipes/get.php";
+        die();
+    }
+}
+
 //Controller progression
 if ($route === "progression") {
     if ($method === "GET") {

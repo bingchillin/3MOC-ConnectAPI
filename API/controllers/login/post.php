@@ -8,7 +8,6 @@ $json = Request::getJsonBody();
 
 // 1. Vérifier que l'utilisateur existe bien en base de données
 $user = UserModel::getByEmail($json["email"]);
-
 // 2. Si il n'existe pas, renvoyer une erreur
 if (!$user) {
     Response::json(400, [], ["success" => false, "error" => "Bad request"]);

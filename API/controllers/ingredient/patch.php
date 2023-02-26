@@ -6,8 +6,12 @@ require __DIR__ . "/../../models/ingredient.php";
 
 try {
     $json = Request::getJsonBody();
-    ingredientModel::updateById($json);
-    Response::json(200, [], ["success" => true]);
+    if(!ingredientModel::getByName($json["name"])){
+      ingredientModel::updateById($json);
+      Response::json(200, [], ["success" => true]);
+    }else{
+      Response::json(201, [], [ "error" => "Ingredient deja existant" ]);
+    }
 } catch (PDOException $exception) {
     Response::json(500, [], ["success" => false, "error" => $exception->getMessage()]);
 }

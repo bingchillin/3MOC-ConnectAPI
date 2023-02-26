@@ -8,7 +8,7 @@ class ingredientDetail
     {
         $connection = getDatabaseConnection();
 
-        $getIngredientDetailQuery = $connection->query("SELECT * FROM ingredientDetail");
+        $getIngredientDetailQuery = $connection->query("SELECT * FROM ingredient_detail");
 
         $ingredientDetails = $getIngredientDetailQuery->fetchAll();
 
@@ -18,14 +18,14 @@ class ingredientDetail
     public static function create($ingredientDetail)
     {
         $connection = getDatabaseConnection();
-        $createIngredientDetailQuery = $connection->prepare("INSERT INTO ingredientDetail(idIngredient,qte,masse) VALUES(:idIngredient,:qte,:masse);");
+        $createIngredientDetailQuery = $connection->prepare("INSERT INTO ingredient_detail(idIngredient,qte,masse) VALUES(:idIngredient,:qte,:masse);");
         $createIngredientDetailQuery->execute($ingredientDetail);
     }
 
     public static function getById($id)
     {
         $connection = getDatabaseConnection();
-        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM ingredientDetail WHERE id = :id;");
+        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM ingredient_detail WHERE id = :id;");
 
         $getIngredientDetailByIdQuery->execute(
             [
@@ -41,7 +41,7 @@ class ingredientDetail
     public static function getByIdInd($id_ingr)
     {
         $connection = getDatabaseConnection();
-        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM ingredientDetail WHERE id_ingredient = :id;");
+        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM ingredient_detail WHERE id_ingredient = :id;");
 
         $getIngredientDetailByIdQuery->execute(
             [
@@ -57,13 +57,13 @@ class ingredientDetail
     public static function deleteById($ingredientDetail)
     {
         $connection = getDatabaseConnection();
-        $deleteByIdQuery = $connection->prepare("DELETE FROM ingredientDetail WHERE id = :id;");
+        $deleteByIdQuery = $connection->prepare("DELETE FROM ingredient_detail WHERE id = :id;");
         $deleteByIdQuery->execute($user);
     }
 
     public static function updateById($json)
     {
-        $allowedColumns = ["idIngredient","qte","masse"];
+        $allowedColumns = ["id_ingredient","quantity","weight"];
         $columns = array_keys($json);
         $set = [];
 
@@ -76,7 +76,7 @@ class ingredientDetail
         }
 
         $set = implode(", ", $set);
-        $sql = "UPDATE users SET $set WHERE id = :id";
+        $sql = "UPDATE ingredient_detail SET $set WHERE id = :id";
         $connection = getDatabaseConnection();
         $query = $connection->prepare($sql);
         $query->execute($json);
