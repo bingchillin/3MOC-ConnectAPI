@@ -60,6 +60,9 @@ class ingredientModel
         $connection = getDatabaseConnection();
         $deleteByIdQuery = $connection->prepare("DELETE FROM ingredient WHERE id = :id;");
         $deleteByIdQuery->execute($ingredient);
+
+        $deleteIngDet = $connection->prepare("DELETE FROM ingredient_detail WHERE id_ingredient = :id;");
+        $deleteIngDet->execute($ingredient);
     }
 
     public static function deleteByName($ingredient)
