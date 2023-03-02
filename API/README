@@ -1,0 +1,290 @@
+Doc use to show how you have to use the API
+
+#USER
+path: users
+
+_____________________GET ALL USER
+header:none
+body:none
+methode: GET
+retrive:
+"users":
+[
+  {
+    use1
+  },
+  {
+    use2
+  },
+  {
+    usen
+  }
+];
+
+use{
+  "firstname": STRING,
+  "name": STRING,
+  "token": STRING,
+  "address": STRING,
+  "city": STRING,
+  "cp": STRING,
+  "password": STRING,
+  "weight": DOUBLE,
+  "height": DOUBLE,
+  "calorie": INT,
+  "id": INT,
+  "email": STRING
+}
+
+_____________________CREATE USER
+header:none
+body:
+{
+  "firstname": STRING,
+  "name": STRING,
+  "token": STRING,
+  "address": STRING,
+  "city": STRING,
+  "cp": STRING,
+  "password": STRING,
+  "weight": DOUBLE,
+  "height": DOUBLE,
+  "calorie": INT,
+  "id": INT,
+  "email": STRING
+}
+
+methode: POST
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+_____________________UPDATE USER
+header:none
+body:
+{
+  "id": INT, (ID de la recette)
+  "name": STRING (mettre le nom de la colonne à modifier avec les informations)
+}
+
+methode: UPDATE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+_____________________DELETE USER
+header:none
+body:
+{
+  "id": INT (ID de l'utilisateur a supprimer)
+}
+
+methode: DELETE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+#USER RECIPES
+path: user_recipes
+
+_____________________GET ALL USER RECIPES
+header:none
+body:
+
+
+
+methode: GET
+retrive:
+"recettes":
+[{
+  "id": INT,              (ID de la recette)
+  "name_recipe": STRING,  (nom de la recette)
+  "timer": INT,           (durée de la recette)
+  "description": STRING,  (description de la recette)
+  "quantity": INT,        (quantitée de l'ingredient si pas poids)
+  "weight": DOUBLE,       (poids en gramme de l'ingredient si pas quantitée
+  "name": STRING          (nom de l'ingredient)
+}]
+
+
+_______________________________________________________________________________________________
+
+
+#RECIPES
+path: recipes
+
+_____________________GET ALL RECIPES
+header:none
+body:none
+methode: GET
+retrive:
+"recettes":
+[
+  {
+    rec1
+  },
+  {
+    rec2
+  },
+  {
+    recn
+  }
+];
+
+rec{
+  "id_user": INT,         (id du createur)
+  "name": STRING,         (nom de la recette)
+  "timer": INT,           (temps de preparition)
+  "description": STRING,  (description de la recette)
+  "id": INT               (id de la recette)
+}
+
+_____________________CREATE RECIPES
+header:none
+body:
+{
+  "name": STRING,       (nom de la recette)
+  "timer": INT,         (temps de preparation)
+  "id_user": INT,       (id du createur de la recette)
+  "description": STRING (description recette)
+}
+
+methode: POST
+retrive:
+"success":true
+SINON
+"error":...
+
+_____________________UPDATE RECIPES
+header:none
+body:
+{
+  "id": INT,     (ID de la recette)
+  "name": STRING (mettre le nom de la colonne à modifier avec les informations)
+}
+
+methode: UPDATE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+_____________________DELETE RECIPES
+header:none
+body:
+{
+  "id": INT (ID de la recette a supprimer)
+}
+
+methode: DELETE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+
+_______________________________________________________________________________________________
+
+
+#INGREDIENT
+path: ingredient
+
+_____________________GET ALL INGREDIENT
+header:none
+body:none
+methode: GET
+retrive:
+"ingredient":
+[
+  {
+    ing1
+  },
+  {
+    ing2
+  },
+  {
+    ingn
+  }
+];
+
+rec{
+  "id_user": INT,         (id du createur)
+  "name": STRING,         (nom de la recette)
+  "timer": INT,           (temps de preparition)
+  "description": STRING,  (description de la recette)
+  "id": INT               (id de la recette)
+}
+
+_____________________CREATE RECIPES
+header:none
+body:
+{
+  "name": STRING,       (nom de la recette)
+  "timer": INT,         (temps de preparation)
+  "id_user": INT,       (id du createur de la recette)
+  "description": STRING (description recette)
+}
+
+methode: POST
+retrive:
+"success":true
+SINON
+"error":...
+
+_____________________UPDATE RECIPES
+header:none
+body:
+{
+  "id": INT,     (ID de la recette)
+  "name": STRING (mettre le nom de la colonne à modifier avec les informations)
+}
+
+methode: UPDATE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+_____________________DELETE RECIPES
+header:none
+body:
+{
+  "id": INT (ID de la recette a supprimer)
+}
+
+methode: DELETE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
