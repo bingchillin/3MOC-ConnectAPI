@@ -9,6 +9,7 @@ import UIKit
 
 class TrainingViewController: UIViewController {
     
+    @IBOutlet weak var iconBackgroundView: UIView!
     class func newInstance() -> TrainingViewController {
         let trainingViewController = TrainingViewController()
         
@@ -16,6 +17,8 @@ class TrainingViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.removeFromSuperview()
+        iconBackgroundView.layer.cornerRadius = 20
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
