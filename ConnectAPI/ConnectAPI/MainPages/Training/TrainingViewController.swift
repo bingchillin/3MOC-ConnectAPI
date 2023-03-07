@@ -10,6 +10,7 @@ import UIKit
 class TrainingViewController: UIViewController {
     
     @IBOutlet weak var iconBackgroundView: UIView!
+    
     class func newInstance() -> TrainingViewController {
         let trainingViewController = TrainingViewController()
         
