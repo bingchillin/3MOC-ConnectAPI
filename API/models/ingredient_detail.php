@@ -67,7 +67,7 @@ class ingredientDetail
 
     public static function updateById($json)
     {
-        $allowedColumns = ["id_ingredient","quantity","weight"];
+        $allowedColumns = ["id_ingredient","quantity","weight","calories"];
         $columns = array_keys($json);
         $set = [];
 
