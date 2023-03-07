@@ -6,7 +6,7 @@ require __DIR__ . "/../../library/request.php";
 
 try {
     $json = Request::getJsonBody();
-    $ingredient = ingredientModel::getById($json["id"]);
+    $ingredient = favoriesModel::getByDoubleId($json);
 
     if (!$ingredient) {
         Response::json(404, [], ["success" => false, "error" => "Ingredient non trouvé"]);

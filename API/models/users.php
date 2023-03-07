@@ -50,7 +50,7 @@ class UserModel
         }*/
 
         $connection = getDatabaseConnection();
-        $createUserQuery = $connection->prepare("INSERT INTO users(firstname,name,address,calorie,city,cp,email,height,password,weight) VALUES(:firstname,:name,:address,:calorie,:city,:cp,:email,:height,:password,:weight);");
+        $createUserQuery = $connection->prepare("INSERT INTO users(firstname,name,address,city,cp,email,height,password,weight) VALUES(:firstname,:name,:address,:city,:cp,:email,:height,:password,:weight);");
         $createUserQuery->execute($user);
     }
 
