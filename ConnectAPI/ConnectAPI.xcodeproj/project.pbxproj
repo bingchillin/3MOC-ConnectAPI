@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D770ACB29B7DF700017EE53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770ACA29B7DF700017EE53 /* User.swift */; };
+		2D770ACD29B7DFE00017EE53 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770ACC29B7DFE00017EE53 /* Recipe.swift */; };
+		2D770ACF29B7E1280017EE53 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770ACE29B7E1280017EE53 /* Ingredient.swift */; };
+		2D770AD129B7E1C20017EE53 /* Ingredient_detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AD029B7E1C20017EE53 /* Ingredient_detail.swift */; };
+		2D770AD329B7E2D30017EE53 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AD229B7E2D30017EE53 /* Favorite.swift */; };
 		2D88F11B29952C0000D5CA79 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F11929952C0000D5CA79 /* HomepageViewController.swift */; };
 		2D88F11C29952C0000D5CA79 /* HomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D88F11A29952C0000D5CA79 /* HomepageViewController.xib */; };
 		2D88F12129952D3C00D5CA79 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F11F29952D3C00D5CA79 /* TrainingViewController.swift */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D770ACA29B7DF700017EE53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2D770ACC29B7DFE00017EE53 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		2D770ACE29B7E1280017EE53 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		2D770AD029B7E1C20017EE53 /* Ingredient_detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient_detail.swift; sourceTree = "<group>"; };
+		2D770AD229B7E2D30017EE53 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		2D88F11929952C0000D5CA79 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		2D88F11A29952C0000D5CA79 /* HomepageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageViewController.xib; sourceTree = "<group>"; };
 		2D88F11F29952D3C00D5CA79 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +75,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D770AC929B7DF610017EE53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D770ACA29B7DF700017EE53 /* User.swift */,
+				2D770ACC29B7DFE00017EE53 /* Recipe.swift */,
+				2D770ACE29B7E1280017EE53 /* Ingredient.swift */,
+				2D770AD029B7E1C20017EE53 /* Ingredient_detail.swift */,
+				2D770AD229B7E2D30017EE53 /* Favorite.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2D88F11829952BE100D5CA79 /* MainPages */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +153,7 @@
 		2DEB1060296F43A0008BE20D /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2D770AC929B7DF610017EE53 /* Models */,
 				2D88F11829952BE100D5CA79 /* MainPages */,
 				D7D6B74C297C2F0A00133E97 /* Sign In */,
 				D754E05C297C239100E2EA58 /* Sign Up */,
@@ -252,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D88F1262995308800D5CA79 /* NutritionViewController.swift in Sources */,
+				2D770AD329B7E2D30017EE53 /* Favorite.swift in Sources */,
+				2D770AD129B7E1C20017EE53 /* Ingredient_detail.swift in Sources */,
 				2D88F12129952D3C00D5CA79 /* TrainingViewController.swift in Sources */,
 				2D88F13529953A5200D5CA79 /* Utils.swift in Sources */,
 				2D88F12B299530A800D5CA79 /* FavoritesViewController.swift in Sources */,
@@ -259,7 +284,10 @@
 				D754E05F297C23B400E2EA58 /* SignUpViewController.swift in Sources */,
 				2DEB1062296F43A0008BE20D /* AppDelegate.swift in Sources */,
 				2DEB1077296F4509008BE20D /* HomeViewController.swift in Sources */,
+				2D770ACF29B7E1280017EE53 /* Ingredient.swift in Sources */,
+				2D770ACB29B7DF700017EE53 /* User.swift in Sources */,
 				2D88F11B29952C0000D5CA79 /* HomepageViewController.swift in Sources */,
+				2D770ACD29B7DFE00017EE53 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
