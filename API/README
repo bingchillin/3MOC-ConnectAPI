@@ -49,7 +49,6 @@ body:
   "password": STRING,
   "weight": DOUBLE,
   "height": DOUBLE,
-  "calorie": INT,
   "id": INT,
   "email": STRING
 }
