@@ -117,7 +117,7 @@ retrive:
   "timer": INT,           (durée de la recette)
   "description": STRING,  (description de la recette)
   "quantity": INT,        (quantitée de l'ingredient si pas poids)
-  "weight": DOUBLE,       (poids en gramme de l'ingredient si pas quantitée
+  "weight": DOUBLE,       (poids en gramme de l'ingredient si pas quantitée)
   "name": STRING          (nom de l'ingredient)
 }]
 
@@ -230,22 +230,18 @@ retrive:
   }
 ];
 
-rec{
-  "id_user": INT,         (id du createur)
-  "name": STRING,         (nom de la recette)
-  "timer": INT,           (temps de preparition)
-  "description": STRING,  (description de la recette)
-  "id": INT               (id de la recette)
+ing{
+  "id": INT,      (id de l'ingredient)
+  "name": STRING, (nom de l'ingredient)
+  "calorie": INT  (calorie de l'ingredient)
 }
 
-_____________________CREATE RECIPES
+_____________________CREATE INGREDIENT
 header:none
 body:
 {
-  "name": STRING,       (nom de la recette)
-  "timer": INT,         (temps de preparation)
-  "id_user": INT,       (id du createur de la recette)
-  "description": STRING (description recette)
+    "name": STRING, (nom de l'ingredient)
+    "calorie": INT  (calorie)
 }
 
 methode: POST
@@ -254,11 +250,11 @@ retrive:
 SINON
 "error":...
 
-_____________________UPDATE RECIPES
+_____________________UPDATE INGREDIENT
 header:none
 body:
 {
-  "id": INT,     (ID de la recette)
+  "id": INT,     (ID de l'ingredient)
   "name": STRING (mettre le nom de la colonne à modifier avec les informations)
 }
 
@@ -276,7 +272,96 @@ _____________________DELETE RECIPES
 header:none
 body:
 {
-  "id": INT (ID de la recette a supprimer)
+  "id": INT (ID de l'ingredient a supprimer)
+}
+
+methode: DELETE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+
+_______________________________________________________________________________________________
+
+
+#INGREDIENT_DETAIL
+path: ingredient_detail
+
+_____________________GET INGREDIENT_DETAIL FROM 1 RECIPE
+header:none
+body:
+{
+  "id": INT (id de la recette)
+}
+methode: GET
+retrive:
+"liste ingredient":
+[
+  {
+    ing1
+  },
+  {
+    ing2
+  },
+  {
+    ingn
+  }
+];
+
+ing{
+  "name": STRING,         (nom de la recette)
+  "timer": INT,           (temps de préparation)
+  "description": STRING,  (description de la recette)
+  "quantity": INT,        (quantitée de l'ingredient si pas poids)
+  "weight": DOUBLE,       (poids en gramme de l'ingredient si pas quantitée)
+  "id": INT
+}
+
+_____________________CREATE INGREDIENT_DETAIL FROM 1 RECIPE
+header:none
+body:
+{
+    "id_ingredient": INT,   (id de l'ingredient à ajouter a la recette)
+    "id_recipe": INT,       (id de la recette)
+    "quantity": INT,        (quantiée de l'ingredient si pas de poids)
+    "weight": INT,          (poids de l'ingredient si pas de quantitée)
+    "calories": INT         (calories de l'ingredient)
+}
+
+methode: POST
+retrive:
+"success":true
+SINON
+"error":...
+
+_____________________UPDATE INGREDIENT_DETAIL FROM 1 RECIPE
+header:none
+body:
+{
+  "id": INT,      (ID de l'ingredient)
+  "quantity": INT (mettre le nom de la colonne à modifier avec les informations)
+}
+
+methode: UPDATE
+retrive:
+{
+  "success":true
+}
+SINON
+{
+  "error":...
+}
+
+_____________________DELETE INGREDIENT_DETAIL FROM 1 RECIPE
+header:none
+body:
+{
+  "id": INT (ID de l'ingredient a supprimer)
 }
 
 methode: DELETE
