@@ -6,7 +6,9 @@ require __DIR__ . "/../../library/request.php";
 
 try {
     $json = Request::getJsonBody();
-    if(!favoriesModel::existance($json["name"])){
+    $favorie = favoriesModel::getByDoubleId($json);
+
+    if(!$favorie){
       favoriesModel::create($json);
       Response::json(201, [], [ "success" => true ]);
     }else{

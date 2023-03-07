@@ -6,14 +6,14 @@ require __DIR__ . "/../../library/request.php";
 
 try {
     $json = Request::getJsonBody();
-    $ingredient = favoriesModel::getByDoubleId($json);
+    $favorie = favoriesModel::getByDoubleId($json);
 
-    if (!$ingredient) {
-        Response::json(404, [], ["success" => false, "error" => "Ingredient non trouvé"]);
+    if (!$favorie) {
+        Response::json(404, [], ["success" => false, "error" => "favorie non trouvé"]);
         die();
     }
 
-    ingredientModel::deleteById($json);
+    favoriesModel::deleteById($json);
     Response::json(200, [], ["success" => true]);
 } catch (PDOException $exception) {
     Response::json(500, [], ["success" => false, "error" => $exception->getMessage()]);
