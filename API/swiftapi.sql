@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Feb 22, 2023 at 08:48 AM
--- Server version: 5.7.24
--- PHP Version: 8.0.1
+-- Hôte : localhost:8889
+-- Généré le : mar. 07 mars 2023 à 20:09
+-- Version du serveur : 5.7.39
+-- Version de PHP : 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,24 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `swiftapi`
+-- Base de données : `swiftapi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ingredient`
+-- Structure de la table `favories`
+--
+
+CREATE TABLE `favories` (
+  `id_recipe` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ingredient`
 --
 
 CREATE TABLE `ingredient` (
@@ -36,7 +47,7 @@ CREATE TABLE `ingredient` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ingredient_detail`
+-- Structure de la table `ingredient_detail`
 --
 
 CREATE TABLE `ingredient_detail` (
@@ -44,13 +55,14 @@ CREATE TABLE `ingredient_detail` (
   `id_ingredient` int(11) NOT NULL,
   `quantity` double DEFAULT NULL,
   `weight` double DEFAULT NULL,
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `calories` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recipes`
+-- Structure de la table `recipes`
 --
 
 CREATE TABLE `recipes` (
@@ -64,7 +76,7 @@ CREATE TABLE `recipes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -83,57 +95,57 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `ingredient`
+-- Index pour la table `ingredient`
 --
 ALTER TABLE `ingredient`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ingredient_detail`
+-- Index pour la table `ingredient_detail`
 --
 ALTER TABLE `ingredient_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `recipes`
+-- Index pour la table `recipes`
 --
 ALTER TABLE `recipes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `ingredient`
+-- AUTO_INCREMENT pour la table `ingredient`
 --
 ALTER TABLE `ingredient`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `ingredient_detail`
+-- AUTO_INCREMENT pour la table `ingredient_detail`
 --
 ALTER TABLE `ingredient_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `recipes`
+-- AUTO_INCREMENT pour la table `recipes`
 --
 ALTER TABLE `recipes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
