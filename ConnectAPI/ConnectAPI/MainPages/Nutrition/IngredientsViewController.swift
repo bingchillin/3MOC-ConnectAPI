@@ -1,23 +1,13 @@
 //
-//  NutritionViewController.swift
+//  IngredientsViewController.swift
 //  ConnectAPI
 //
-//  Created by Thanudi Madawala on 09/02/2023.
+//  Created by Mohamed El Fakharany on 08/03/2023.
 //
 
 import UIKit
 
-class NutritionViewController: UIViewController {
-    
-    @IBAction func toCreateRecipe(_ sender: Any) {
-        self.navigationController?.pushViewController(CreateRecipeViewController(), animated: true)
-    }
-    
-    class func newInstance() -> NutritionViewController {
-        let nutritionViewController = NutritionViewController()
-        
-        return nutritionViewController
-    }
+class IngredientsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
