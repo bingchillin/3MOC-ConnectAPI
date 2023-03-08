@@ -56,11 +56,11 @@ class sportDetail
         return $sportDetail;
     }
 
-    public static function deleteById($ingredientDetail)
+    public static function deleteById($sportDetail)
     {
         $connection = getDatabaseConnection();
         $deleteByIdQuery = $connection->prepare("DELETE FROM detail_sport WHERE id = :id;");
-        $deleteByIdQuery->execute($user);
+        $deleteByIdQuery->execute($sportDetail);
     }
 
     public static function updateById($json)
