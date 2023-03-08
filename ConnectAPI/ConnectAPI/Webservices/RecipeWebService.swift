@@ -1,20 +1,20 @@
 //
-//  UserWebService.swift
+//  RecipeWebService.swift
 //  ConnectAPI
 //
-//  Created by Thanudi Madawala on 07/03/2023.
+//  Created by Thanudi Madawala on 08/03/2023.
 //
 
 import Foundation
 
-class UserWebService {
+class RecipeWebService {
     
     //Recuperer tout les users
-    class func getAllUsers(completion: @escaping ([User]?, Error?) -> Void) {
-        guard let userURL = URL(string: "http://localhost:8888/api/controllers/users/get.php") else {
+    class func getAllRecipes(completion: @escaping ([Recipe]?, Error?) -> Void) {
+        guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/get.php") else {
             return
         }
-        let task = URLSession.shared.dataTask(with: userURL) { data, res, err in
+        let task = URLSession.shared.dataTask(with: recipeURL) { data, res, err in
             guard err == nil, let d = data else {
                 completion(nil, err)
                 return
@@ -23,22 +23,22 @@ class UserWebService {
                 completion(nil, NSError(domain: "com.esgi.user.invalid-json", code: 1))
                 return
             }
-            let users = UserFactory.users(from: json)
-           completion(users, nil) // fin OK
+            let recipes = RecipeFactory.recipes(from: json)
+           completion(recipes, nil) // fin OK
         }
         task.resume()
     }
     
     
-    // Inscription
-    class func registerUser(parameters: String) {
-            guard let userURL = URL(string: "http://localhost:8888/api/controllers/users/post.php") else {
-                        print("Not found RegisterUser URL")
+    // Create a recipe
+    class func createRecipe(parameters: String) {
+            guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/post.php") else {
+                        print("Not found createRecipe URL")
                         return
                     }
             let postData = parameters.data(using: .utf8)
         
-            var request = URLRequest(url: userURL)
+            var request = URLRequest(url: recipeURL)
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
             request.httpMethod = "POST"
@@ -55,14 +55,14 @@ class UserWebService {
             task.resume()
         }
     
-    class func loginUser(parameters: String) {
+    class func updateRecipebyId(parameters: String) {
         
-        guard let userURL = URL(string: "http://localhost:8888/api/controllers/login/post.php") else {
-                    print("Not found LoginUser URL")
+        guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/patch.php") else {
+                    print("Not found updateRecipebyId URL")
                     return
                 }
         let postData = parameters.data(using: .utf8)
-        var request = URLRequest(url: userURL)
+        var request = URLRequest(url: recipeURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         request.httpMethod = "POST"
@@ -74,30 +74,19 @@ class UserWebService {
             return
           }
           print(String(data: data, encoding: .utf8)!)
-            let defaults = UserDefaults.standard
-
-            defaults.set(data, forKey: "userId")
-            defaults.synchronize()
-            let test = "1"
-            if test != defaults.string(forKey: "userId") {
-                print(test)
-            }
         }
-
-
 
         task.resume()
     }
     
-    class func logoutUser() {
+    class func deleteRecipebyId(parameters: String) {
         
-        guard let userURL = URL(string: "http://localhost:8888/api/controllers/login/post.php") else {
-                    print("Not found LoginOut URL")
+        guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/delete.php") else {
+                    print("Not found deleteRecipebyId URL")
                     return
                 }
-        let defaults = UserDefaults.standard
-        let postData = (defaults.string(forKey: "userId"))!.data(using: .utf8)
-        var request = URLRequest(url: userURL)
+        let postData = parameters.data(using: .utf8)
+        var request = URLRequest(url: recipeURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         request.httpMethod = "POST"
@@ -113,5 +102,4 @@ class UserWebService {
 
         task.resume()
     }
-    
 }
