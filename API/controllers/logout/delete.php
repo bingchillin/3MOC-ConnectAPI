@@ -8,7 +8,7 @@ require __DIR__ . "/../../models/users.php";
 $json = Request::getJsonBody();
 
 // 2. Récupérer l'utilisateur en bdd
-$user = UserModel::getByToken($json["email"]);
+$user = UserModel::getById($json["id"]);
 
 // 3. Si l'utilisateur n'existe pas, renvoie une erreur
 if (!$user) {
