@@ -40,6 +40,8 @@
 		2DEB106E296F43A0008BE20D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB106C296F43A0008BE20D /* LaunchScreen.storyboard */; };
 		2DEB1077296F4509008BE20D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB1075296F4509008BE20D /* HomeViewController.swift */; };
 		2DEB1078296F4509008BE20D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB1076296F4509008BE20D /* HomeViewController.xib */; };
+		B95D407829B85DD300BFBDE9 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D407629B85DD300BFBDE9 /* RecipeTableViewCell.swift */; };
+		B95D407929B85DD300BFBDE9 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95D407729B85DD300BFBDE9 /* RecipeTableViewCell.xib */; };
 		D754E05F297C23B400E2EA58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754E05D297C23B400E2EA58 /* SignUpViewController.swift */; };
 		D754E060297C23B400E2EA58 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D754E05E297C23B400E2EA58 /* SignUpViewController.xib */; };
 		D7A02AF029B8304500DD4EDF /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A02AEE29B8304500DD4EDF /* PhotoTableViewCell.xib */; };
@@ -90,6 +92,8 @@
 		2DEB106F296F43A0008BE20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DEB1075296F4509008BE20D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2DEB1076296F4509008BE20D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B95D407629B85DD300BFBDE9 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		B95D407729B85DD300BFBDE9 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		D754E05D297C23B400E2EA58 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D754E05E297C23B400E2EA58 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		D7A02AEE29B8304500DD4EDF /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			children = (
 				2D88F1242995308800D5CA79 /* NutritionViewController.swift */,
 				2D88F1252995308800D5CA79 /* NutritionViewController.xib */,
+				B95D407629B85DD300BFBDE9 /* RecipeTableViewCell.swift */,
+				B95D407729B85DD300BFBDE9 /* RecipeTableViewCell.xib */,
 				D7A02AF329B83A9000DD4EDF /* CreateRecipeViewController.swift */,
 				D7A02AF429B83A9000DD4EDF /* CreateRecipeViewController.xib */,
 				D7A02AF729B83EEA00DD4EDF /* IngredientsViewController.swift */,
@@ -334,6 +340,7 @@
 				2D88F12C299530A800D5CA79 /* FavoritesViewController.xib in Resources */,
 				D7A02AFA29B83EEA00DD4EDF /* IngredientsViewController.xib in Resources */,
 				2D88F1302995329600D5CA79 /* Localizable.strings in Resources */,
+				B95D407929B85DD300BFBDE9 /* RecipeTableViewCell.xib in Resources */,
 				D754E060297C23B400E2EA58 /* SignUpViewController.xib in Resources */,
 				2D88F11C29952C0000D5CA79 /* HomepageViewController.xib in Resources */,
 				2DEB1078296F4509008BE20D /* HomeViewController.xib in Resources */,
@@ -359,6 +366,7 @@
 				2D770AE529B7EFAA0017EE53 /* DetailPlan.swift in Sources */,
 				2D88F13529953A5200D5CA79 /* Utils.swift in Sources */,
 				D7A02AF929B83EEA00DD4EDF /* IngredientsViewController.swift in Sources */,
+				B95D407829B85DD300BFBDE9 /* RecipeTableViewCell.swift in Sources */,
 				2D88F12B299530A800D5CA79 /* FavoritesViewController.swift in Sources */,
 				2D770AEB29B7F3330017EE53 /* DetailPlanFactory.swift in Sources */,
 				D7D6B74F297C2F2300133E97 /* SignInViewController.swift in Sources */,

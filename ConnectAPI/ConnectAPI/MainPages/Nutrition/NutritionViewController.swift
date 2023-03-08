@@ -7,7 +7,10 @@
 
 import UIKit
 
-class NutritionViewController: UIViewController {
+class NutritionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var recipeTableView: UITableView!
+    var recipe: [Recipe]?
     
     @IBAction func toCreateRecipe(_ sender: Any) {
         self.navigationController?.pushViewController(CreateRecipeViewController(), animated: true)
@@ -21,19 +24,31 @@ class NutritionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.recipeTableView.dataSource = self
+        self.recipeTableView.delegate = self
+        let recipeCellNib = UINib(nibName: "RecipeTableViewCell", bundle: nil) // nib correspond à un xib compilé
+        self.recipeTableView.register(recipeCellNib, forCellReuseIdentifier: "RecipeCellId") // identifiant permettant de générer ce type de cellule
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        RecipeWebService.getAllRecipes { recipe,err in
+            self.recipe = recipe
+            DispatchQueue.main.sync {
+                self.recipeTableView.reloadData() // permet de recharger la tableview
+            }
+        }
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.recipe?.count ?? 0 // ?? -> si la partie de gauche est nil retourne la partie de droite
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCellId", for: indexPath) as! RecipeTableViewCell
+        cell.redraw(with: self.recipe![indexPath.row])
+        return cell
+    }
 }
