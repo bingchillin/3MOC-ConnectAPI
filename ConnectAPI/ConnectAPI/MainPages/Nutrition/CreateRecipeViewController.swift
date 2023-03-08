@@ -9,6 +9,7 @@ import UIKit
 
 class CreateRecipeViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var todayLbl: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var creationLbl: UILabel!
     @IBOutlet weak var timerTextField: UITextField!
@@ -37,6 +38,8 @@ class CreateRecipeViewController: UIViewController, UITextFieldDelegate {
         self.timerTextField.delegate = self
         self.descriptionTextField.delegate = self
         
+        todayLbl.text = NSLocalizedString("topbar.today", comment: "")
+
         nameTextField.placeholder = NSLocalizedString("controllers.mainpages.nutrition.createrecipe.name", comment: "")
         timerTextField.placeholder = NSLocalizedString("controllers.mainpages.nutrition.createrecipe.timer", comment: "")
         descriptionTextField.placeholder = NSLocalizedString("controllers.mainpages.nutrition.createrecipe.description", comment: "")

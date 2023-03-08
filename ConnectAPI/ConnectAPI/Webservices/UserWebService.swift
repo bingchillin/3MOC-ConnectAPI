@@ -87,6 +87,7 @@ class UserWebService {
                     if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                         if let id = jsonObject["id"] as? String {
                             print(id)
+                            UserDefaults.standard.set(id, forKey: "uId")
                         }
                     }
                 } catch {
@@ -98,14 +99,14 @@ class UserWebService {
         task.resume()
     }
 
-    class func logoutUser() {
+    class func logoutUser(parameters: String) {
 
-        guard let userURL = URL(string: "http://localhost:8888/api/controllers/login/post.php") else {
+        guard let userURL = URL(string: "http://localhost:8888/api/controllers/logout/delete.php") else {
                     print("Not found LoginOut URL")
                     return
                 }
-        let defaults = UserDefaults.standard
-        let postData = (defaults.string(forKey: "userId"))!.data(using: .utf8)
+        
+        let postData = parameters.data(using: .utf8)
         var request = URLRequest(url: userURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 

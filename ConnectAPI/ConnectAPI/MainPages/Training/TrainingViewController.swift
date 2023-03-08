@@ -9,6 +9,10 @@ import UIKit
 
 class TrainingViewController: UIViewController {
 
+    @IBOutlet weak var todayLbl: UILabel!
+    @IBOutlet weak var programLbl: UILabel!
+    @IBOutlet weak var allProgramlbl: UILabel!
+    @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var photoTableView: UITableView!
     @IBOutlet weak var iconBackgroundView: UIView!
     
@@ -18,24 +22,27 @@ class TrainingViewController: UIViewController {
         return trainingViewController
     }
 
+    @IBAction func handleLogout(_ sender: UIButton) {
+        if (UserDefaults.standard.string(forKey: "uId") != nil){
+            let parameter = "{\n    \"id\" : \"\(UserDefaults.standard.string(forKey: "uId")!)\"\n"
+            UserWebService.logoutUser(parameters: parameter)
+            self.navigationController?.pushViewController(HomeViewController(), animated: true)
+            
+        }
+        
+        else{
+            print("MARCHE PAS")
+        }
+        
+    }
     override func viewDidLoad() {
+        todayLbl.text = NSLocalizedString("topbar.today", comment: "")
+        programLbl.text = NSLocalizedString("controllers.mainpages.training.program", comment: "")
+        allProgramlbl.text = NSLocalizedString("controllers.mainpages.training.allprogram", comment: "")
+        logoutBtn.setTitle(NSLocalizedString("topbar.logout", comment: ""), for: .normal)
         self.navigationController?.navigationBar.removeFromSuperview()
-        iconBackgroundView.layer.cornerRadius = 20
+        
         super.viewDidLoad()
 
-//        self.photoTableView.dataSource = self
-//        self.photoTableView.delegate = self
-//        let photoCellNib = UINib(nibName: "PhotoTableViewCell", bundle: nil) // nib correspond à un xib compilé
-//        self.photoTableView.register(photoCellNib, forCellReuseIdentifier: "PhotoCellId") // identifiant permettant de générer ce type de cellule
-        
-//        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//            return self.photos?.count ?? 0
-//        }
-//
-//        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCellId", for: indexPath) as! PhotoTableViewCell
-//            cell.redraw(with: self.photos![indexPath.row])
-//            return cell
-//        }
     }
 }
