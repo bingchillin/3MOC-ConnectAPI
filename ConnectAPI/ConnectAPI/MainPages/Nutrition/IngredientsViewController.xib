@@ -19,11 +19,11 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3z-rk-SU8">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3z-rk-SU8">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg5-y3-LQS">
-                            <rect key="frame" x="25" y="87.666666666666686" width="114" height="25.333333333333329"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aujourd'hui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg5-y3-LQS">
+                            <rect key="frame" x="25" y="87.666666666666671" width="114" height="25.333333333333329"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -31,13 +31,61 @@
                     </subviews>
                     <color key="backgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="sg5-y3-LQS" secondAttribute="bottom" constant="15" id="Bzj-ai-VKD"/>
-                        <constraint firstItem="sg5-y3-LQS" firstAttribute="leading" secondItem="g3z-rk-SU8" secondAttribute="leading" constant="25" id="TpD-p7-K0R"/>
+                        <constraint firstItem="sg5-y3-LQS" firstAttribute="leading" secondItem="g3z-rk-SU8" secondAttribute="leading" constant="25" id="jRc-mU-G9p"/>
+                        <constraint firstAttribute="bottom" secondItem="sg5-y3-LQS" secondAttribute="bottom" constant="15" id="xFk-Np-qCp"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajout des ingrédients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-MY-YFG">
+                    <rect key="frame" x="25" y="158" width="201" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrédient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysl-zN-TzZ">
+                    <rect key="frame" x="25" y="212" width="165" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="FQA-u1-EQG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8a-Ue-MZd">
+                    <rect key="frame" x="200" y="212" width="168" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Poids" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bV3-mk-txy">
+                    <rect key="frame" x="25" y="276" width="343" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRd-Cf-kC6">
+                    <rect key="frame" x="25" y="340" width="343" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Créer la recette"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="uRd-Cf-kC6" secondAttribute="trailing" constant="25" id="5eC-cz-HUD"/>
+                <constraint firstItem="ysl-zN-TzZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="FDO-au-eQO"/>
+                <constraint firstItem="L8a-Ue-MZd" firstAttribute="top" secondItem="aNS-MY-YFG" secondAttribute="bottom" constant="30" id="LfJ-k6-cC8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L8a-Ue-MZd" secondAttribute="trailing" constant="25" id="Otq-JC-Mdu"/>
+                <constraint firstItem="uRd-Cf-kC6" firstAttribute="top" secondItem="bV3-mk-txy" secondAttribute="bottom" constant="30" id="WzY-fN-oCD"/>
+                <constraint firstItem="aNS-MY-YFG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="ami-dv-yGC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="g3z-rk-SU8" secondAttribute="bottom" constant="690" id="d3e-4b-Jee"/>
+                <constraint firstItem="L8a-Ue-MZd" firstAttribute="leading" secondItem="ysl-zN-TzZ" secondAttribute="trailing" constant="10" id="diR-Ju-EYP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bV3-mk-txy" secondAttribute="trailing" constant="25" id="fSc-8B-XaL"/>
+                <constraint firstItem="uRd-Cf-kC6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="gc4-xd-vCl"/>
+                <constraint firstItem="ysl-zN-TzZ" firstAttribute="top" secondItem="aNS-MY-YFG" secondAttribute="bottom" constant="30" id="hZq-8n-8fB"/>
+                <constraint firstItem="aNS-MY-YFG" firstAttribute="top" secondItem="g3z-rk-SU8" secondAttribute="bottom" constant="30" id="irI-3C-cKq"/>
+                <constraint firstItem="bV3-mk-txy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="jDQ-nb-udd"/>
+                <constraint firstItem="g3z-rk-SU8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="leH-Sh-vBv"/>
+                <constraint firstItem="bV3-mk-txy" firstAttribute="top" secondItem="ysl-zN-TzZ" secondAttribute="bottom" constant="30" id="p35-gh-cXr"/>
+                <constraint firstItem="g3z-rk-SU8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="spc-Lt-nHN"/>
+                <constraint firstItem="g3z-rk-SU8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zef-6i-Cbz"/>
+            </constraints>
             <point key="canvasLocation" x="106" y="20"/>
         </view>
     </objects>
