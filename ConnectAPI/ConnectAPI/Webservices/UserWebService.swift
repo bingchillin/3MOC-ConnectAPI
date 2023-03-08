@@ -32,7 +32,7 @@ class UserWebService {
     
     // Inscription
     class func registerUser(parameters: [String: Any]) {
-        guard let userURL = URL(string: "http://localhost:8888/api/users/") else {
+        guard let userURL = URL(string: "http://localhost:8888/api/controllers/users/post.php") else {
             print("Not found RegisterUser URL")
             return
         }
