@@ -55,6 +55,32 @@ class UserWebService {
         task.resume() 
     }
     
+    class func loginUser(parameters: [String: Any]) {
+        guard let userURL = URL(string: "http://localhost:8888/api/controllers/login/post.php") else {
+            print("Not found LoginUser URL")
+            return
+        }
+        
+        let postData = try! JSONSerialization.data(withJSONObject: parameters)
+        print(postData)
+        
+        var request = URLRequest(url: userURL)
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: userURL) { data, res, err in
+            guard err == nil, let d = data else {
+                print("error", err?.localizedDescription ?? "")
+                return
+            }
+            print(String(data: d, encoding: .utf8)!)
+        }
+        task.resume()
+    }
+    
+    
+    
     
     
 }
