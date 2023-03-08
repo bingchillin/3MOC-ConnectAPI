@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="logoutBtn" destination="WP8-X0-Ycu" id="RuD-a2-lgO"/>
                 <outlet property="photoTableView" destination="y49-0L-xeQ" id="cpl-64-Fha"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,9 +30,23 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-X0-Ycu">
+                            <rect key="frame" x="306.33333333333331" y="102" width="86.666666666666686" height="30"/>
+                            <color key="tintColor" red="0.62356505100000004" green="0.1533538415" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Deconnexion">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="handleLogout:" destination="-1" eventType="touchUpInside" id="wic-hJ-2dp"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.6470588235294118" green="0.80784313725490198" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WP8-X0-Ycu" secondAttribute="bottom" constant="11" id="5Oo-RW-c0m"/>
+                        <constraint firstItem="WP8-X0-Ycu" firstAttribute="top" secondItem="Gmx-El-13A" secondAttribute="top" constant="102" id="7C4-co-fQr"/>
+                        <constraint firstAttribute="trailing" secondItem="WP8-X0-Ycu" secondAttribute="trailing" id="MUa-hi-Yb6"/>
                         <constraint firstAttribute="bottom" secondItem="X75-YP-45B" secondAttribute="bottom" constant="15" id="eyG-IJ-I1F"/>
                         <constraint firstItem="X75-YP-45B" firstAttribute="leading" secondItem="Gmx-El-13A" secondAttribute="leading" constant="25" id="x8Z-yo-hex"/>
                     </constraints>

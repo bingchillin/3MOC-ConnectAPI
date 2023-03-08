@@ -13,8 +13,6 @@ class NutritionViewController: UIViewController {
     @IBOutlet weak var createBtn: UIButton!
     @IBOutlet weak var recipeLbl: UILabel!
     @IBOutlet weak var allrecipeLbl: UILabel!
-    
-    
     @IBAction func toCreateRecipe(_ sender: Any) {
         self.navigationController?.pushViewController(CreateRecipeViewController(), animated: true)
     }
@@ -26,9 +24,7 @@ class NutritionViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        
-        todayLbl.text = NSLocalizedString("topbar.today", comment: "")
-        recipeLbl.text = NSLocalizedString("topbar.today", comment: "")
+        recipeLbl.text = NSLocalizedString("controllers.mainpages.nutrition.recipelabel", comment: "")
 
 
         super.viewDidLoad()

@@ -87,6 +87,8 @@ class UserWebService {
                     if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                         if let id = jsonObject["id"] as? String {
                             print(id)
+                            let defaults = UserDefaults.standard
+                            defaults.set(id, forKey: "uId")
                         }
                     }
                 } catch {
@@ -104,8 +106,8 @@ class UserWebService {
                     print("Not found LoginOut URL")
                     return
                 }
-        let defaults = UserDefaults.standard
-        let postData = (defaults.string(forKey: "userId"))!.data(using: .utf8)
+        
+        let postData = (UserDefaults.standard.string(forKey: "uId"))!.data(using: .utf8)
         var request = URLRequest(url: userURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
