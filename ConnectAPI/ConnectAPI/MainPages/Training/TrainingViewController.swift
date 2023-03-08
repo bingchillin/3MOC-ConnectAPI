@@ -24,7 +24,7 @@ class TrainingViewController: UIViewController {
 
     @IBAction func handleLogout(_ sender: UIButton) {
         if (UserDefaults.standard.string(forKey: "uId") != nil){
-            let parameter = "{\n    \"id\" : \"\(UserDefaults.standard.string(forKey: "uId")!)\"\n"
+            let parameter = "{\n    \"id\" : \"\(UserDefaults.standard.string(forKey: "uId")!)\"\n}"
             UserWebService.logoutUser(parameters: parameter)
             self.navigationController?.pushViewController(HomeViewController(), animated: true)
             
