@@ -165,10 +165,19 @@
                         <action selector="handleLogout:" destination="-1" eventType="touchUpInside" id="FTg-5G-DJf"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTP-oX-zS6">
+                    <rect key="frame" x="315" y="210" width="53" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Fun"/>
+                    <connections>
+                        <action selector="funBtn:" destination="-1" eventType="touchUpInside" id="kzs-eE-Zzp"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="xTP-oX-zS6" firstAttribute="top" secondItem="vpc-AR-i5c" secondAttribute="bottom" constant="10" id="0JT-2W-oCI"/>
                 <constraint firstItem="deH-qH-wtS" firstAttribute="top" secondItem="7iR-1T-kZO" secondAttribute="bottom" constant="30" id="6FS-m9-x91"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KBs-kW-jDw" secondAttribute="trailing" constant="25" id="6a0-iM-VrE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vpc-AR-i5c" secondAttribute="trailing" constant="16" id="7eF-ae-M6l"/>
@@ -188,6 +197,7 @@
                 <constraint firstItem="7Ea-R9-GRy" firstAttribute="top" secondItem="pO3-KE-7Ka" secondAttribute="bottom" constant="30" id="am8-6s-Ei3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KBs-kW-jDw" secondAttribute="bottom" constant="30" id="cNz-v6-o9W"/>
                 <constraint firstItem="KBs-kW-jDw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="ed3-tB-e63"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xTP-oX-zS6" secondAttribute="trailing" constant="25" id="i5Q-VF-VzB"/>
                 <constraint firstItem="vpc-AR-i5c" firstAttribute="leading" secondItem="7iR-1T-kZO" secondAttribute="trailing" constant="39" id="jCR-xR-enK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pO3-KE-7Ka" secondAttribute="trailing" constant="25" id="kne-Iv-Ymz"/>
                 <constraint firstItem="vpc-AR-i5c" firstAttribute="top" secondItem="yRo-a7-AHI" secondAttribute="bottom" constant="8" symbolic="YES" id="mke-rH-7Wk"/>

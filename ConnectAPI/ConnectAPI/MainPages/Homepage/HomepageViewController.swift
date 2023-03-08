@@ -9,6 +9,11 @@ import UIKit
 
 class HomepageViewController: UIViewController {
     
+    @IBAction func funBtn(_ sender: Any) {
+        self.navigationController?.pushViewController(AboutViewController(), animated: true)
+    }
+    
+    
     @IBOutlet weak var recipeLbl: UILabel!
     @IBOutlet weak var programLbl: UILabel!
     @IBOutlet weak var suggestLbl: UILabel!
