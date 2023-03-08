@@ -12,6 +12,18 @@
 		2D770ACF29B7E1280017EE53 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770ACE29B7E1280017EE53 /* Ingredient.swift */; };
 		2D770AD129B7E1C20017EE53 /* Ingredient_detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AD029B7E1C20017EE53 /* Ingredient_detail.swift */; };
 		2D770AD329B7E2D30017EE53 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AD229B7E2D30017EE53 /* Favorite.swift */; };
+		2D770AD929B7E6900017EE53 /* UserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AD829B7E6900017EE53 /* UserFactory.swift */; };
+		2D770ADB29B7E8630017EE53 /* RecipeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770ADA29B7E8630017EE53 /* RecipeFactory.swift */; };
+		2D770ADD29B7E9340017EE53 /* IngredientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770ADC29B7E9340017EE53 /* IngredientFactory.swift */; };
+		2D770ADF29B7EBB70017EE53 /* Ingredient_detailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770ADE29B7EBB70017EE53 /* Ingredient_detailFactory.swift */; };
+		2D770AE129B7EBC60017EE53 /* FavoriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AE029B7EBC60017EE53 /* FavoriteFactory.swift */; };
+		2D770AE329B7EEFA0017EE53 /* TrainingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AE229B7EEFA0017EE53 /* TrainingPlan.swift */; };
+		2D770AE529B7EFAA0017EE53 /* DetailPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AE429B7EFAA0017EE53 /* DetailPlan.swift */; };
+		2D770AE729B7F1BE0017EE53 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AE629B7F1BE0017EE53 /* Exercise.swift */; };
+		2D770AE929B7F2930017EE53 /* TrainingPlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AE829B7F2930017EE53 /* TrainingPlanFactory.swift */; };
+		2D770AEB29B7F3330017EE53 /* DetailPlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AEA29B7F3330017EE53 /* DetailPlanFactory.swift */; };
+		2D770AED29B7F3F30017EE53 /* ExerciseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AEC29B7F3F30017EE53 /* ExerciseFactory.swift */; };
+		2D770AF129B7F4B30017EE53 /* UserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D770AF029B7F4B30017EE53 /* UserWebService.swift */; };
 		2D88F11B29952C0000D5CA79 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F11929952C0000D5CA79 /* HomepageViewController.swift */; };
 		2D88F11C29952C0000D5CA79 /* HomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D88F11A29952C0000D5CA79 /* HomepageViewController.xib */; };
 		2D88F12129952D3C00D5CA79 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F11F29952D3C00D5CA79 /* TrainingViewController.swift */; };
@@ -39,6 +51,18 @@
 		2D770ACE29B7E1280017EE53 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		2D770AD029B7E1C20017EE53 /* Ingredient_detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient_detail.swift; sourceTree = "<group>"; };
 		2D770AD229B7E2D30017EE53 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		2D770AD829B7E6900017EE53 /* UserFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFactory.swift; sourceTree = "<group>"; };
+		2D770ADA29B7E8630017EE53 /* RecipeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFactory.swift; sourceTree = "<group>"; };
+		2D770ADC29B7E9340017EE53 /* IngredientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientFactory.swift; sourceTree = "<group>"; };
+		2D770ADE29B7EBB70017EE53 /* Ingredient_detailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient_detailFactory.swift; sourceTree = "<group>"; };
+		2D770AE029B7EBC60017EE53 /* FavoriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFactory.swift; sourceTree = "<group>"; };
+		2D770AE229B7EEFA0017EE53 /* TrainingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlan.swift; sourceTree = "<group>"; };
+		2D770AE429B7EFAA0017EE53 /* DetailPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlan.swift; sourceTree = "<group>"; };
+		2D770AE629B7F1BE0017EE53 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		2D770AE829B7F2930017EE53 /* TrainingPlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlanFactory.swift; sourceTree = "<group>"; };
+		2D770AEA29B7F3330017EE53 /* DetailPlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlanFactory.swift; sourceTree = "<group>"; };
+		2D770AEC29B7F3F30017EE53 /* ExerciseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFactory.swift; sourceTree = "<group>"; };
+		2D770AF029B7F4B30017EE53 /* UserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebService.swift; sourceTree = "<group>"; };
 		2D88F11929952C0000D5CA79 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		2D88F11A29952C0000D5CA79 /* HomepageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageViewController.xib; sourceTree = "<group>"; };
 		2D88F11F29952D3C00D5CA79 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
@@ -79,12 +103,38 @@
 			isa = PBXGroup;
 			children = (
 				2D770ACA29B7DF700017EE53 /* User.swift */,
+				2D770AE229B7EEFA0017EE53 /* TrainingPlan.swift */,
 				2D770ACC29B7DFE00017EE53 /* Recipe.swift */,
 				2D770ACE29B7E1280017EE53 /* Ingredient.swift */,
 				2D770AD029B7E1C20017EE53 /* Ingredient_detail.swift */,
 				2D770AD229B7E2D30017EE53 /* Favorite.swift */,
+				2D770AE429B7EFAA0017EE53 /* DetailPlan.swift */,
+				2D770AE629B7F1BE0017EE53 /* Exercise.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2D770AD629B7E64B0017EE53 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				2D770AD829B7E6900017EE53 /* UserFactory.swift */,
+				2D770ADA29B7E8630017EE53 /* RecipeFactory.swift */,
+				2D770ADC29B7E9340017EE53 /* IngredientFactory.swift */,
+				2D770ADE29B7EBB70017EE53 /* Ingredient_detailFactory.swift */,
+				2D770AE029B7EBC60017EE53 /* FavoriteFactory.swift */,
+				2D770AE829B7F2930017EE53 /* TrainingPlanFactory.swift */,
+				2D770AEA29B7F3330017EE53 /* DetailPlanFactory.swift */,
+				2D770AEC29B7F3F30017EE53 /* ExerciseFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		2D770AD729B7E6590017EE53 /* Webservices */ = {
+			isa = PBXGroup;
+			children = (
+				2D770AF029B7F4B30017EE53 /* UserWebService.swift */,
+			);
+			path = Webservices;
 			sourceTree = "<group>";
 		};
 		2D88F11829952BE100D5CA79 /* MainPages */ = {
@@ -153,6 +203,8 @@
 		2DEB1060296F43A0008BE20D /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2D770AD729B7E6590017EE53 /* Webservices */,
+				2D770AD629B7E64B0017EE53 /* Factories */,
 				2D770AC929B7DF610017EE53 /* Models */,
 				2D88F11829952BE100D5CA79 /* MainPages */,
 				D7D6B74C297C2F0A00133E97 /* Sign In */,
@@ -278,15 +330,27 @@
 				2D770AD329B7E2D30017EE53 /* Favorite.swift in Sources */,
 				2D770AD129B7E1C20017EE53 /* Ingredient_detail.swift in Sources */,
 				2D88F12129952D3C00D5CA79 /* TrainingViewController.swift in Sources */,
+				2D770ADD29B7E9340017EE53 /* IngredientFactory.swift in Sources */,
+				2D770AE529B7EFAA0017EE53 /* DetailPlan.swift in Sources */,
 				2D88F13529953A5200D5CA79 /* Utils.swift in Sources */,
 				2D88F12B299530A800D5CA79 /* FavoritesViewController.swift in Sources */,
+				2D770AEB29B7F3330017EE53 /* DetailPlanFactory.swift in Sources */,
 				D7D6B74F297C2F2300133E97 /* SignInViewController.swift in Sources */,
 				D754E05F297C23B400E2EA58 /* SignUpViewController.swift in Sources */,
 				2DEB1062296F43A0008BE20D /* AppDelegate.swift in Sources */,
+				2D770AE129B7EBC60017EE53 /* FavoriteFactory.swift in Sources */,
 				2DEB1077296F4509008BE20D /* HomeViewController.swift in Sources */,
 				2D770ACF29B7E1280017EE53 /* Ingredient.swift in Sources */,
 				2D770ACB29B7DF700017EE53 /* User.swift in Sources */,
 				2D88F11B29952C0000D5CA79 /* HomepageViewController.swift in Sources */,
+				2D770AE929B7F2930017EE53 /* TrainingPlanFactory.swift in Sources */,
+				2D770ADF29B7EBB70017EE53 /* Ingredient_detailFactory.swift in Sources */,
+				2D770AE729B7F1BE0017EE53 /* Exercise.swift in Sources */,
+				2D770AE329B7EEFA0017EE53 /* TrainingPlan.swift in Sources */,
+				2D770AED29B7F3F30017EE53 /* ExerciseFactory.swift in Sources */,
+				2D770AD929B7E6900017EE53 /* UserFactory.swift in Sources */,
+				2D770AF129B7F4B30017EE53 /* UserWebService.swift in Sources */,
+				2D770ADB29B7E8630017EE53 /* RecipeFactory.swift in Sources */,
 				2D770ACD29B7DFE00017EE53 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
