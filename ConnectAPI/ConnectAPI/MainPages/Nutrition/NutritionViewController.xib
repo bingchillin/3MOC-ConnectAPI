@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="allrecipeLbl" destination="Fh2-qD-Tbr" id="tmM-Jt-mQG"/>
                 <outlet property="createBtn" destination="RlW-Qf-j6T" id="DBn-b1-2n6"/>
+                <outlet property="logoutBtn" destination="DY9-sb-VdD" id="DrJ-JL-byl"/>
                 <outlet property="recipeLbl" destination="I8w-cq-1a7" id="iIV-rX-GDk"/>
                 <outlet property="todayLbl" destination="XsA-nW-NQP" id="2bs-Cf-rrn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -32,21 +33,10 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY9-sb-VdD">
-                            <rect key="frame" x="306.33333333333331" y="87" width="86.666666666666686" height="30"/>
-                            <color key="tintColor" red="0.62356505100000004" green="0.1533538415" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Deconnexion">
-                                <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
-                            </buttonConfiguration>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="DY9-sb-VdD" secondAttribute="bottom" constant="11" id="09q-Sd-FWL"/>
                         <constraint firstAttribute="bottom" secondItem="XsA-nW-NQP" secondAttribute="bottom" constant="15" id="I78-8R-G0p"/>
-                        <constraint firstItem="DY9-sb-VdD" firstAttribute="top" secondItem="HXx-YI-SBn" secondAttribute="top" constant="87" id="Kyk-JV-AZn"/>
-                        <constraint firstAttribute="trailing" secondItem="DY9-sb-VdD" secondAttribute="trailing" id="YAC-rx-wqY"/>
                         <constraint firstItem="XsA-nW-NQP" firstAttribute="leading" secondItem="HXx-YI-SBn" secondAttribute="leading" constant="25" id="cgI-3R-8B7"/>
                     </constraints>
                 </view>
@@ -94,6 +84,17 @@
                     <rect key="frame" x="0.0" y="396.66666666666674" width="393" height="421.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY9-sb-VdD">
+                    <rect key="frame" x="306" y="118" width="86.666666666666686" height="64"/>
+                    <color key="tintColor" red="0.62356505100000004" green="0.1533538415" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Deconnexion">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="handleLogout:" destination="-1" eventType="touchUpInside" id="h0N-Hd-zFl"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,10 +102,15 @@
                 <constraint firstItem="1Pu-nC-e4h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="7fY-N7-NXn"/>
                 <constraint firstItem="I8w-cq-1a7" firstAttribute="top" secondItem="HXx-YI-SBn" secondAttribute="bottom" constant="30" id="A0A-fh-RV1"/>
                 <constraint firstItem="3RV-Vc-SR1" firstAttribute="top" secondItem="1Pu-nC-e4h" secondAttribute="bottom" constant="30" id="FBY-fg-zcx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DY9-sb-VdD" secondAttribute="trailing" constant="0.33000000000000002" id="G48-5u-tCG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3RV-Vc-SR1" secondAttribute="trailing" id="GRf-ex-keI"/>
+                <constraint firstAttribute="trailing" secondItem="DY9-sb-VdD" secondAttribute="trailing" id="R7j-Rw-CtM"/>
                 <constraint firstItem="vWU-Fp-XbV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Twq-hx-gq3"/>
                 <constraint firstItem="HXx-YI-SBn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yck-gy-ieq"/>
                 <constraint firstItem="vWU-Fp-XbV" firstAttribute="top" secondItem="I8w-cq-1a7" secondAttribute="bottom" constant="30" id="c3W-iM-Cao"/>
+                <constraint firstItem="DY9-sb-VdD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="59" id="gpm-3j-6AT"/>
+                <constraint firstItem="DY9-sb-VdD" firstAttribute="leading" secondItem="I8w-cq-1a7" secondAttribute="trailing" constant="158.33000000000001" id="gvd-o5-Xc0"/>
+                <constraint firstItem="vWU-Fp-XbV" firstAttribute="top" secondItem="DY9-sb-VdD" secondAttribute="bottom" constant="30" id="mz0-U1-Aei"/>
                 <constraint firstAttribute="trailing" secondItem="vWU-Fp-XbV" secondAttribute="trailing" constant="25" id="oZA-Wm-tHj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HXx-YI-SBn" secondAttribute="trailing" id="ram-06-Tbt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3RV-Vc-SR1" secondAttribute="bottom" id="rqk-sz-YLY"/>

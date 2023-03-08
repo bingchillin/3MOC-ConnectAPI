@@ -43,6 +43,12 @@
 // TOP BAR
 
 "topbar.today" = "Today";
+"topbar.logout" = "Logout";
+
+//TRAINING
+
+"controllers.mainpages.training.program" = "My Programs";
+"controllers.mainpages.training.allprogram" = "JYM Programs";
 
 // NUTRITION
 
