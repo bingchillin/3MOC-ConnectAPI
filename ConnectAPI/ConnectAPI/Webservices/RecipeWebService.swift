@@ -22,9 +22,7 @@ class RecipeWebService {
                 completion(nil, NSError(domain: "com.esgi.user.invalid-json", code: 1))
                 return
             }
-            print(json)
             let recipes = RecipeFactory.recipes(from: json)
-            print(recipes)
             completion(recipes, nil) // fin OK
         }
         task.resume()

@@ -33,9 +33,24 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         RecipeWebService.getAllRecipes { recipe,err in
-            self.recipe = recipe
+            var recipes = [Recipe]()
+
+            if let recipeDictionaries = recipe as? [[String:Any]] {
+                for recipeDictionary in recipeDictionaries {
+                    if let id = recipeDictionary["id"] as? Int,
+                       let name = recipeDictionary["name"] as? String,
+                       let timer = recipeDictionary["timer"] as? Int,
+                       let description = recipeDictionary["description"] as? String,
+                       let userId = recipeDictionary["id_user"] as? Int {
+                        let recipe = Recipe(id: id, id_user: userId, name: name, timer: timer, description: description)
+                        recipes.append(recipe)
+                    }
+                }
+            }
+
+            self.recipe = recipes
+            print(recipe)
             DispatchQueue.main.sync {
                 self.recipeTableView.reloadData() // permet de recharger la tableview
             }

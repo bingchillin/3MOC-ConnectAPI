@@ -7,7 +7,7 @@ require __DIR__ . "/../../library/request.php";
 try {
 
     $recettes = RecettesModel::getAll();
-    Response::json(200, [], [ "recettes" => $recettes ]);
+    Response::json(200, [], [  $recettes ]);
 
 } catch (PDOException $exception) {
     $errorMessage = $exception->getMessage();
