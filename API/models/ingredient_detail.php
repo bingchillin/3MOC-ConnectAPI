@@ -62,7 +62,7 @@ class ingredientDetail
     {
         $connection = getDatabaseConnection();
         $deleteByIdQuery = $connection->prepare("DELETE FROM ingredient_detail WHERE id = :id;");
-        $deleteByIdQuery->execute($user);
+        $deleteByIdQuery->execute($ingredientDetail);
     }
 
     public static function updateById($json)
