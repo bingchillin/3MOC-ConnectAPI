@@ -100,14 +100,14 @@ class UserWebService {
         task.resume()
     }
 
-    class func logoutUser() {
+    class func logoutUser(parameters: String) {
 
-        guard let userURL = URL(string: "http://localhost:8888/api/controllers/login/post.php") else {
+        guard let userURL = URL(string: "http://localhost:8888/api/controllers/logout/delete.php") else {
                     print("Not found LoginOut URL")
                     return
                 }
         
-        let postData = (UserDefaults.standard.string(forKey: "uId"))!.data(using: .utf8)
+        let postData = parameters.data(using: .utf8)
         var request = URLRequest(url: userURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
