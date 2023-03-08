@@ -29,4 +29,4 @@ $user["token"] = $token;
 UserModel::updateById($user);
 
 // 7. Renvoyer le token dans la réponse
-Response::json(200, [], ["success" => true, "token" => $token]);
+Response::json(200, [], ["success" => true, "id" => $user["id"]]);

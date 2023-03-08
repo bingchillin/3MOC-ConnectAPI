@@ -26,7 +26,7 @@ class sportDetail
     public static function getById($id)
     {
         $connection = getDatabaseConnection();
-        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM ingredient_detail WHERE id = :id;");
+        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM detail_sport WHERE id = :id;");
 
         $getIngredientDetailByIdQuery->execute(
             [
@@ -56,11 +56,11 @@ class sportDetail
         return $sportDetail;
     }
 
-    public static function deleteById($ingredientDetail)
+    public static function deleteById($sportDetail)
     {
         $connection = getDatabaseConnection();
         $deleteByIdQuery = $connection->prepare("DELETE FROM detail_sport WHERE id = :id;");
-        $deleteByIdQuery->execute($user);
+        $deleteByIdQuery->execute($sportDetail);
     }
 
     public static function updateById($json)

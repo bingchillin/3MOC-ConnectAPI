@@ -62,6 +62,9 @@ class UserModel
         $connection = getDatabaseConnection();
         $deleteByIdQuery = $connection->prepare("DELETE FROM users WHERE id = :id;");
         $deleteByIdQuery->execute($user);
+
+        $deleteRecipe = $connection->prepare("DELETE FROM recipe WHERE id_user = :id;");
+        $deleteRecipe->execute($user);
     }
 
     public static function updateById($json)
