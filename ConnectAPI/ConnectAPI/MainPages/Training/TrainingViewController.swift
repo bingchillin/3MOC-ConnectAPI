@@ -20,7 +20,7 @@ class TrainingViewController: UIViewController {
 
     override func viewDidLoad() {
         self.navigationController?.navigationBar.removeFromSuperview()
-        iconBackgroundView.layer.cornerRadius = 20
+        
         super.viewDidLoad()
 
 //        self.photoTableView.dataSource = self

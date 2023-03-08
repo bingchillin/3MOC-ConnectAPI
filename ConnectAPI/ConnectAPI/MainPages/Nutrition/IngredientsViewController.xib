@@ -11,7 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IngredientsViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="addIngredientsLbl" destination="aNS-MY-YFG" id="4fI-SB-lnm"/>
+                <outlet property="createBtn" destination="uRd-Cf-kC6" id="FA1-H3-53i"/>
+                <outlet property="nameTextField" destination="L8a-Ue-MZd" id="3Ai-jI-1vL"/>
+                <outlet property="quantityTextField" destination="L8a-Ue-MZd" id="Gr1-G1-Spg"/>
+                <outlet property="todayLbl" destination="sg5-y3-LQS" id="WlM-78-Hgn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weightTextField" destination="bV3-mk-txy" id="X7E-AM-QYS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

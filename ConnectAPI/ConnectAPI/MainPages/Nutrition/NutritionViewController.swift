@@ -9,6 +9,12 @@ import UIKit
 
 class NutritionViewController: UIViewController {
     
+    @IBOutlet weak var todayLbl: UILabel!
+    @IBOutlet weak var createBtn: UIButton!
+    @IBOutlet weak var recipeLbl: UILabel!
+    @IBOutlet weak var allrecipeLbl: UILabel!
+    
+    
     @IBAction func toCreateRecipe(_ sender: Any) {
         self.navigationController?.pushViewController(CreateRecipeViewController(), animated: true)
     }
@@ -20,20 +26,13 @@ class NutritionViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        
+        todayLbl.text = NSLocalizedString("topbar.today", comment: "")
+        recipeLbl.text = NSLocalizedString("topbar.today", comment: "")
+
+
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
