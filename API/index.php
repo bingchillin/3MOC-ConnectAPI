@@ -105,22 +105,82 @@ if ($route === "user_recipes") {
     }
 }
 
-//Controller progression
-if ($route === "progression") {
+//Controller favories
+if ($route === "favories") {
     if ($method === "GET") {
-        include __DIR__ . "/controllers/progression/get.php";
+        include __DIR__ . "/controllers/favories/get.php";
         die();
     }
     if ($method === "POST") {
-        include __DIR__ . "/controllers/progression/post.php";
+        include __DIR__ . "/controllers/favories/post.php";
         die();
     }
     if ($method === "PATCH") {
-        include __DIR__ . "/controllers/progression/patch.php";
+        include __DIR__ . "/controllers/favories/patch.php";
         die();
     }
     if ($method === "DELETE") {
-        include __DIR__ . "/controllers/progression/delete.php";
+        include __DIR__ . "/controllers/favories/delete.php";
+        die();
+    }
+}
+
+//Controller plan_sport
+if ($route === "plan_sport") {
+    if ($method === "GET") {
+        include __DIR__ . "/controllers/plan_sport/get.php";
+        die();
+    }
+    if ($method === "POST") {
+        include __DIR__ . "/controllers/plan_sport/post.php";
+        die();
+    }
+    if ($method === "PATCH") {
+        include __DIR__ . "/controllers/plan_sport/patch.php";
+        die();
+    }
+    if ($method === "DELETE") {
+        include __DIR__ . "/controllers/plan_sport/delete.php";
+        die();
+    }
+}
+
+//Controller detail_sport
+if ($route === "detail_sport") {
+    if ($method === "GET") {
+        include __DIR__ . "/controllers/detail_sport/get.php";
+        die();
+    }
+    if ($method === "POST") {
+        include __DIR__ . "/controllers/detail_sport/post.php";
+        die();
+    }
+    if ($method === "PATCH") {
+        include __DIR__ . "/controllers/detail_sport/patch.php";
+        die();
+    }
+    if ($method === "DELETE") {
+        include __DIR__ . "/controllers/detail_sport/delete.php";
+        die();
+    }
+}
+
+//Controller exercise
+if ($route === "exercise") {
+    if ($method === "GET") {
+        include __DIR__ . "/controllers/exercise/get.php";
+        die();
+    }
+    if ($method === "POST") {
+        include __DIR__ . "/controllers/exercise/post.php";
+        die();
+    }
+    if ($method === "PATCH") {
+        include __DIR__ . "/controllers/exercise/patch.php";
+        die();
+    }
+    if ($method === "DELETE") {
+        include __DIR__ . "/controllers/exercise/delete.php";
         die();
     }
 }
