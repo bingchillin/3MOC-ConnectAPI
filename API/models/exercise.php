@@ -2,31 +2,31 @@
 
 require __DIR__ . "/../library/get-database-connection.php";
 
-class ingredientModel
+class exerciceModel
 {
     public static function getAll()
     {
         $connection = getDatabaseConnection();
 
-        $getIngredientQuery = $connection->query("SELECT * FROM ingredient");
+        $getExerciseQuery = $connection->query("SELECT * FROM exercise");
 
-        $ingredient = $getIngredientQuery->fetchAll();
+        $exercise = $getExerciseQuery->fetchAll();
 
-        return $ingredient;
+        return $exercise;
     }
 
-    public static function create($ingredient)
+    public static function create($exercise)
     {
 
         $connection = getDatabaseConnection();
-        $createIngredientQuery = $connection->prepare("INSERT INTO ingredient(name,calorie) VALUES(:name,:calorie);");
-        $createIngredientQuery->execute($ingredient);
+        $createIngredientQuery = $connection->prepare("INSERT INTO exercise(name,calorie) VALUES(:name,:calorie);");
+        $createIngredientQuery->execute($exercise);
     }
 
     public static function getById($id)
     {
         $connection = getDatabaseConnection();
-        $getIngredientQuery = $connection->prepare("SELECT * FROM ingredient WHERE id = :id;");
+        $getIngredientQuery = $connection->prepare("SELECT * FROM exercise WHERE id = :id;");
 
         $getIngredientQuery->execute(
             [
@@ -34,15 +34,15 @@ class ingredientModel
             ]
         );
 
-        $ingredient = $getIngredientQuery->fetch();
+        $exercise = $getIngredientQuery->fetch();
 
-        return $ingredient;
+        return $exercise;
     }
 
     public static function getByName($name)
     {
         $connection = getDatabaseConnection();
-        $getIngredientQuery = $connection->prepare("SELECT * FROM ingredient WHERE name = :name;");
+        $getIngredientQuery = $connection->prepare("SELECT * FROM exercise WHERE name = :name;");
 
         $getIngredientQuery->execute(
             [
@@ -50,31 +50,24 @@ class ingredientModel
             ]
         );
 
-        $ingredient = $getIngredientQuery->fetch();
+        $exercise = $getIngredientQuery->fetch();
 
-        return $ingredient;
+        return $exercise;
     }
 
-    public static function deleteById($ingredient)
+    public static function deleteById($exercise)
     {
         $connection = getDatabaseConnection();
-        $deleteByIdQuery = $connection->prepare("DELETE FROM ingredient WHERE id = :id;");
-        $deleteByIdQuery->execute($ingredient);
+        $deleteByIdQuery = $connection->prepare("DELETE FROM exercise WHERE id = :id;");
+        $deleteByIdQuery->execute($exercise);
 
-        $deleteIngDet = $connection->prepare("DELETE FROM ingredient_detail WHERE id_ingredient = :id;");
-        $deleteIngDet->execute($ingredient);
-    }
-
-    public static function deleteByName($ingredient)
-    {
-        $connection = getDatabaseConnection();
-        $deleteByNameQuery = $connection->prepare("DELETE FROM ingredient WHERE name = :name;");
-        $deleteByNameQuery->execute($ingredient["name"]);
+        $deleteIngDet = $connection->prepare("DELETE FROM detail_plan WHERE id_exercise = :id;");
+        $deleteIngDet->execute($exercise);
     }
 
     public static function updateById($json)
     {
-        $allowedColumns = ["name","calorie"];
+        $allowedColumns = ["name","description"];
         $columns = array_keys($json);
         $set = [];
 
@@ -87,7 +80,7 @@ class ingredientModel
         }
 
         $set = implode(", ", $set);
-        $sql = "UPDATE ingredient SET $set WHERE id = :id";
+        $sql = "UPDATE exercise SET $set WHERE id = :id";
         $connection = getDatabaseConnection();
         $query = $connection->prepare($sql);
         $query->execute($json);
