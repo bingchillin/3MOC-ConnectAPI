@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
-                <outlet property="adressTextField" destination="Cci-RD-jYq" id="whK-JR-J9n"/>
+                <outlet property="addressTextField" destination="Cci-RD-jYq" id="whK-JR-J9n"/>
                 <outlet property="alreadyaccountLabel" destination="x3Q-q0-cky" id="sN3-dP-Wvd"/>
                 <outlet property="cityTextField" destination="o1h-dd-otj" id="YLb-gH-MzV"/>
                 <outlet property="emailTextField" destination="0gC-fM-Uqa" id="3Nb-bs-L46"/>
@@ -93,6 +93,9 @@
                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                         <color key="baseBackgroundColor" red="0.68235301969999995" green="0.80392158030000005" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="signUp:" destination="-1" eventType="touchUpInside" id="AEz-3L-eWL"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez déja un compte ? Connectez-vous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3Q-q0-cky">
                     <rect key="frame" x="25" y="758.66666666666663" width="343" height="14.333333333333371"/>

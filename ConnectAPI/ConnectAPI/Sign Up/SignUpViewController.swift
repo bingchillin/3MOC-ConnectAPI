@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var zipcodeTextfield: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var adressTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var alreadyaccountLabel: UILabel!
@@ -29,7 +29,21 @@ class SignUpViewController: UIViewController {
         
         return signUpViewContoller
     }
-
+    
+    
+    
+    @IBAction func signUp(_ sender: UIButton) {
+        if (nameTextField.hasText && lastnameTextField.hasText && passwordTextField.hasText && emailTextField.hasText && addressTextField.hasText && zipcodeTextfield.hasText && cityTextField.hasText){
+            
+                let parameters: [String: Any] = ["firstname": nameTextField.text, "name": lastnameTextField.text, "address": addressTextField.text, "city": cityTextField.text, "cp": zipcodeTextfield.text, "email":emailTextField.text, "password":passwordTextField.text]
+                UserWebService.registerUser(parameters: parameters)
+        }
+        
+        else{
+            print("MARCHE PAS")
+        }
+    }
+    
     override func viewDidLoad() {
         
         welcomeTitleLabel.text = NSLocalizedString("controllers.signup.welcome", comment: "")
@@ -38,7 +52,7 @@ class SignUpViewController: UIViewController {
         nameTextField.placeholder = NSLocalizedString("controllers.signup.name", comment: "")
         lastnameTextField.placeholder = NSLocalizedString("controllers.signup.lastname", comment: "")
         emailTextField.placeholder = NSLocalizedString("controllers.signup.mail", comment: "")
-        adressTextField.placeholder = NSLocalizedString("controllers.signup.address", comment: "")
+        addressTextField.placeholder = NSLocalizedString("controllers.signup.address", comment: "")
         cityTextField.placeholder = NSLocalizedString("controllers.signup.city", comment: "")
         zipcodeTextfield.placeholder = NSLocalizedString("controllers.signup.zipcode", comment: "")
         passwordTextField.placeholder = NSLocalizedString("controllers.signup.password", comment: "")
