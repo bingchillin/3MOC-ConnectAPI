@@ -40,3 +40,14 @@
 "controllers.signup.signUpButton" = "S'inscrire";
 "controllers.signup.alreadyaccount" = "Vous avez déjà un compte ? Connectez-vous";
 
+
+// NUTRITION
+
+"controllers.mainpages.nutrition.createrecipe.name" = "Nom de la recette";
+"controllers.mainpages.nutrition.createrecipe.timer" = "Temps de préparation";
+"controllers.mainpages.nutrition.createrecipe.description" = "Description";
+
+"controllers.mainpages.nutrition.createrecipe.createbutton" = "Passez aux ingrédients";
+
+"controllers.mainpages.nutrition.createrecipe.createlabel" = "Création de recette";
+

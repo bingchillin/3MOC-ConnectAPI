@@ -4,7 +4,6 @@
 //
 //  Created by Thanudi Madawala on 08/03/2023.
 //
-
 import Foundation
 
 class RecipeWebService {
@@ -24,7 +23,7 @@ class RecipeWebService {
                 return
             }
             let recipes = RecipeFactory.recipes(from: json)
-           completion(recipes, nil) // fin OK
+            completion(recipes, nil) // fin OK
         }
         task.resume()
     }
@@ -32,74 +31,74 @@ class RecipeWebService {
     
     // Create a recipe
     class func createRecipe(parameters: String) {
-            guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/post.php") else {
-                        print("Not found createRecipe URL")
-                        return
-                    }
-            let postData = parameters.data(using: .utf8)
+        guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/post.php") else {
+            print("Not found createRecipe URL")
+            return
+        }
+        let postData = parameters.data(using: .utf8)
         
-            var request = URLRequest(url: recipeURL)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-            request.httpMethod = "POST"
-            request.httpBody = postData
-
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-              guard let data = data else {
+        var request = URLRequest(url: recipeURL)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
                 print(String(describing: error))
                 return
-              }
-              print(String(data: data, encoding: .utf8)!)
             }
-
-            task.resume()
+            print(String(data: data, encoding: .utf8)!)
         }
+        
+        task.resume()
+    }
     
     class func updateRecipebyId(parameters: String) {
         
         guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/patch.php") else {
-                    print("Not found updateRecipebyId URL")
-                    return
-                }
+            print("Not found updateRecipebyId URL")
+            return
+        }
         let postData = parameters.data(using: .utf8)
         var request = URLRequest(url: recipeURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        
         request.httpMethod = "POST"
         request.httpBody = postData
-
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-          guard let data = data else {
-            print(String(describing: error))
-            return
-          }
-          print(String(data: data, encoding: .utf8)!)
+            guard let data = data else {
+                print(String(describing: error))
+                return
+            }
+            print(String(data: data, encoding: .utf8)!)
         }
-
+        
         task.resume()
     }
     
     class func deleteRecipebyId(parameters: String) {
         
         guard let recipeURL = URL(string: "http://localhost:8888/api/controllers/recettes/delete.php") else {
-                    print("Not found deleteRecipebyId URL")
-                    return
-                }
+            print("Not found deleteRecipebyId URL")
+            return
+        }
         let postData = parameters.data(using: .utf8)
         var request = URLRequest(url: recipeURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        
         request.httpMethod = "POST"
         request.httpBody = postData
-
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-          guard let data = data else {
-            print(String(describing: error))
-            return
-          }
-          print(String(data: data, encoding: .utf8)!)
+            guard let data = data else {
+                print(String(describing: error))
+                return
+            }
+            print(String(data: data, encoding: .utf8)!)
         }
-
+        
         task.resume()
     }
 }

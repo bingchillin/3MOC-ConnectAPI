@@ -34,6 +34,7 @@
 		2D88F12C299530A800D5CA79 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D88F12A299530A800D5CA79 /* FavoritesViewController.xib */; };
 		2D88F1302995329600D5CA79 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D88F1322995329600D5CA79 /* Localizable.strings */; };
 		2D88F13529953A5200D5CA79 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F13429953A5200D5CA79 /* Utils.swift */; };
+		2DA176D529B84DF800D7888E /* RecipeWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA176D429B84DF800D7888E /* RecipeWebService.swift */; };
 		2DEB1062296F43A0008BE20D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB1061296F43A0008BE20D /* AppDelegate.swift */; };
 		2DEB106B296F43A0008BE20D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB106A296F43A0008BE20D /* Assets.xcassets */; };
 		2DEB106E296F43A0008BE20D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB106C296F43A0008BE20D /* LaunchScreen.storyboard */; };
@@ -81,6 +82,7 @@
 		2D88F1312995329600D5CA79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D88F1332995329900D5CA79 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D88F13429953A5200D5CA79 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2DA176D429B84DF800D7888E /* RecipeWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeWebService.swift; sourceTree = "<group>"; };
 		2DEB105E296F43A0008BE20D /* ConnectAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEB1061296F43A0008BE20D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DEB106A296F43A0008BE20D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				2D770AF029B7F4B30017EE53 /* UserWebService.swift */,
+				2DA176D429B84DF800D7888E /* RecipeWebService.swift */,
 			);
 			path = Webservices;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA176D529B84DF800D7888E /* RecipeWebService.swift in Sources */,
 				2D88F1262995308800D5CA79 /* NutritionViewController.swift in Sources */,
 				2D770AD329B7E2D30017EE53 /* Favorite.swift in Sources */,
 				2D770AD129B7E1C20017EE53 /* Ingredient_detail.swift in Sources */,

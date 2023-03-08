@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateRecipeViewController: UIViewController {
+class CreateRecipeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var creationLbl: UILabel!
@@ -19,18 +19,16 @@ class CreateRecipeViewController: UIViewController {
         
         if (nameTextField.hasText && timerTextField.hasText && descriptionTextField.hasText){
             let parameters = "{\n    \"name\" : \"\(nameTextField.text!)\",\n    \"timer\" : \"\(timerTextField.text!)\",\n    \"description\" : \"\(descriptionTextField.text!)\"\n}"
-                RecipeWebService.loginUser(parameters: parameters)
+            RecipeWebService.createRecipe(parameters: parameters)
             
-            tabNextViews()
+            self.navigationController?.pushViewController(IngredientsViewController(), animated: true)
+            
         }
         
         else{
             print("MARCHE PAS")
         }
         
-        
-        
-        self.navigationController?.pushViewController(IngredientsViewController(), animated: true)
     }
     
     override func viewDidLoad() {
@@ -39,15 +37,13 @@ class CreateRecipeViewController: UIViewController {
         self.timerTextField.delegate = self
         self.descriptionTextField.delegate = self
         
-        signInLabel.text = NSLocalizedString("controllers.signin.signin", comment: "")
-        signInDescriptionLabel.text = NSLocalizedString("controllers.signin.signinDescription", comment: "")
+        nameTextField.placeholder = NSLocalizedString("controllers.mainpages.nutrition.createrecipe.name", comment: "")
+        timerTextField.placeholder = NSLocalizedString("controllers.mainpages.nutrition.createrecipe.timer", comment: "")
+        descriptionTextField.placeholder = NSLocalizedString("controllers.mainpages.nutrition.createrecipe.description", comment: "")
         
-        mailTextField.placeholder = NSLocalizedString("controllers.signin.mail", comment: "")
-        passwordTextField.placeholder = NSLocalizedString("controllers.signin.password", comment: "")
+        createBtn.setTitle(NSLocalizedString("controllers.mainpages.nutrition.createrecipe.createbutton", comment: ""), for: .normal)
         
-        connectionButton.setTitle(NSLocalizedString("controllers.signin.signinButton", comment: ""), for: .normal)
-        
-        noAccountLabel.text = NSLocalizedString("controllers.signin.noaccount", comment: "")
+        creationLbl.text = NSLocalizedString("controllers.mainpages.nutrition.createrecipe.createlabel", comment: "")
         
         super.viewDidLoad()
         
@@ -81,9 +77,9 @@ class CreateRecipeViewController: UIViewController {
         let realText = NSText.replacingCharacters(in: range, with: string)
         print(realText)
         if realText.count > 0 {
-            self.connectionButton.isEnabled = true
+            self.createBtn.isEnabled = true
         } else {
-            self.connectionButton.isEnabled = false
+            self.createBtn.isEnabled = false
         }
         return true
     }
