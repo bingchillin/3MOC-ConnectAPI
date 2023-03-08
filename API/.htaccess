@@ -7,4 +7,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # Lorsqu'un dossier n'existe pas
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.*)$ /API-JAVA-PROJECT/index.php?route=$1 [L,QSA]
+RewriteRule ^(.*)$ /API/index.php?route=$1 [L,QSA]

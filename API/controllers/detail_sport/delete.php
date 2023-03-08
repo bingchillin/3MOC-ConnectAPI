@@ -1,15 +1,15 @@
 <?php
 
 require __DIR__ . "/../../library/json-response.php";
-require __DIR__ . "/../../models/ingredient_detail.php";
+require __DIR__ . "/../../models/detail_sport.php";
 require __DIR__ . "/../../library/request.php";
 
 try {
     $json = Request::getJsonBody();
-    $recette = sportDetail::getById($json["id"]);
+    $detail = sportDetail::getById($json["id"]);
 
-    if (!$recette) {
-        Response::json(404, [], ["success" => false, "error" => "User not found"]);
+    if (!$detail_sport) {
+        Response::json(404, [], ["success" => false, "error" => "exercise non trouvés"]);
         die();
     }
 

@@ -26,7 +26,7 @@ class sportDetail
     public static function getById($id)
     {
         $connection = getDatabaseConnection();
-        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM ingredient_detail WHERE id = :id;");
+        $getIngredientDetailByIdQuery = $connection->prepare("SELECT * FROM detail_sport WHERE id = :id;");
 
         $getIngredientDetailByIdQuery->execute(
             [
