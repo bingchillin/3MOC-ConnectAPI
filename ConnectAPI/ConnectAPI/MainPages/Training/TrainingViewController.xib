@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="logoutBtn" destination="WP8-X0-Ycu" id="RuD-a2-lgO"/>
                 <outlet property="photoTableView" destination="y49-0L-xeQ" id="cpl-64-Fha"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -70,10 +71,23 @@
                     <rect key="frame" x="0.0" y="411.66666666666674" width="393" height="440.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-X0-Ycu">
+                    <rect key="frame" x="306" y="151" width="86.666666666666686" height="30"/>
+                    <color key="tintColor" red="0.62356505100000004" green="0.1533538415" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Deconnexion">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="handleLogout:" destination="-1" eventType="touchUpInside" id="wic-hJ-2dp"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="WP8-X0-Ycu" firstAttribute="top" secondItem="Gmx-El-13A" secondAttribute="bottom" constant="8" symbolic="YES" id="1vA-mh-OeA"/>
+                <constraint firstItem="H2X-NJ-LzE" firstAttribute="top" secondItem="WP8-X0-Ycu" secondAttribute="bottom" constant="46" id="5NG-YG-dlU"/>
                 <constraint firstItem="rOX-bI-m46" firstAttribute="top" secondItem="Gmx-El-13A" secondAttribute="bottom" constant="30" id="6yB-Jl-xHn"/>
                 <constraint firstItem="gci-DO-i6R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="7Tr-bu-KW8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H2X-NJ-LzE" secondAttribute="trailing" constant="25" id="7nr-88-oAC"/>
@@ -82,6 +96,8 @@
                 <constraint firstItem="H2X-NJ-LzE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="B7R-i5-UqR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gmx-El-13A" secondAttribute="bottom" constant="675" id="Don-GQ-rem"/>
                 <constraint firstItem="gci-DO-i6R" firstAttribute="top" secondItem="H2X-NJ-LzE" secondAttribute="bottom" constant="30" id="ODp-V3-RnO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WP8-X0-Ycu" secondAttribute="trailing" constant="0.33000000000000002" id="SsJ-A9-cmy"/>
+                <constraint firstItem="WP8-X0-Ycu" firstAttribute="leading" secondItem="rOX-bI-m46" secondAttribute="trailing" constant="116.67" id="T0R-ev-Wux"/>
                 <constraint firstItem="H2X-NJ-LzE" firstAttribute="top" secondItem="rOX-bI-m46" secondAttribute="bottom" constant="30" id="UZx-Kn-9Ai"/>
                 <constraint firstItem="y49-0L-xeQ" firstAttribute="top" secondItem="gci-DO-i6R" secondAttribute="bottom" constant="30" id="Yo7-fF-OzW"/>
                 <constraint firstItem="y49-0L-xeQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dcm-8r-rqd"/>

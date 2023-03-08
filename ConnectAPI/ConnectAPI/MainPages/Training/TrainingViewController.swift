@@ -9,6 +9,7 @@ import UIKit
 
 class TrainingViewController: UIViewController {
 
+    @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var photoTableView: UITableView!
     @IBOutlet weak var iconBackgroundView: UIView!
     
@@ -18,6 +19,19 @@ class TrainingViewController: UIViewController {
         return trainingViewController
     }
 
+    @IBAction func handleLogout(_ sender: UIButton) {
+        if (UserDefaults.standard.string(forKey: "uId") != nil){
+            let parameter = "{\n    \"id\" : \"\(UserDefaults.standard.string(forKey: "uId")!)\"\n"
+            UserWebService.logoutUser(parameters: parameter)
+            self.navigationController?.pushViewController(HomeViewController(), animated: true)
+            
+        }
+        
+        else{
+            print("MARCHE PAS")
+        }
+        
+    }
     override func viewDidLoad() {
         self.navigationController?.navigationBar.removeFromSuperview()
         
