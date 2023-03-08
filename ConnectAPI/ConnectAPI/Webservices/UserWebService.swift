@@ -31,56 +31,52 @@ class UserWebService {
     
     
     // Inscription
-    class func registerUser(parameters: [String: Any]) {
-        guard let userURL = URL(string: "http://localhost:8888/api/controllers/users/post.php") else {
-            print("Not found RegisterUser URL")
-            return
-        }
+    class func registerUser(parameters: String) {
+            guard let userURL = URL(string: "http://localhost:8888/api/controllers/users/post.php") else {
+                        print("Not found RegisterUser URL")
+                        return
+                    }
+            let postData = parameters.data(using: .utf8)
         
-        let postData = try! JSONSerialization.data(withJSONObject: parameters)
-        
-        var request = URLRequest(url: userURL)
-        request.httpMethod = "POST"
-        request.httpBody = postData
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let task = URLSession.shared.dataTask(with: userURL) { data, res, err in
-            guard err == nil, let d = data else {
-                print("error", err?.localizedDescription ?? "")
+            var request = URLRequest(url: userURL)
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            request.httpMethod = "POST"
+            request.httpBody = postData
+
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+              guard let data = data else {
+                print(String(describing: error))
                 return
+              }
+              print(String(data: data, encoding: .utf8)!)
             }
-            print(String(data: d, encoding: .utf8)!)
+
+            task.resume()
         }
-        
-        task.resume() 
-    }
     
-    class func loginUser(parameters: [String: Any]) {
+    class func loginUser(parameters: String) {
+        
         guard let userURL = URL(string: "http://localhost:8888/api/controllers/login/post.php") else {
-            print("Not found LoginUser URL")
-            return
-        }
-        
-        let postData = try! JSONSerialization.data(withJSONObject: parameters)
-        print(postData)
-        
+                    print("Not found LoginUser URL")
+                    return
+                }
+        let postData = parameters.data(using: .utf8)
         var request = URLRequest(url: userURL)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
         request.httpMethod = "POST"
         request.httpBody = postData
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let task = URLSession.shared.dataTask(with: userURL) { data, res, err in
-            guard err == nil, let d = data else {
-                print("error", err?.localizedDescription ?? "")
-                return
-            }
-            print(String(data: d, encoding: .utf8)!)
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+          guard let data = data else {
+            print(String(describing: error))
+            return
+          }
+          print(String(data: data, encoding: .utf8)!)
         }
+
         task.resume()
     }
-    
-    
-    
-    
     
 }

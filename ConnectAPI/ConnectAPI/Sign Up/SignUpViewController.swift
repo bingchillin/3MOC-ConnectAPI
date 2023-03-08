@@ -35,8 +35,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUp(_ sender: UIButton) {
         if (nameTextField.hasText && lastnameTextField.hasText && passwordTextField.hasText && emailTextField.hasText && addressTextField.hasText && zipcodeTextfield.hasText && cityTextField.hasText){
             
-                let parameters: [String: Any] = ["firstname": nameTextField.text, "name": lastnameTextField.text, "address": addressTextField.text, "city": cityTextField.text, "cp": zipcodeTextfield.text, "email": emailTextField.text, "password": passwordTextField.text]
+            let parameters = "{\n    \"name\" : \"\(lastnameTextField.text!)\",\n    \"firstname\" : \"\(nameTextField.text!)\",\n    \"address\" : \"\(addressTextField.text!)\",\n    \"city\" : \"\(cityTextField.text!)\",\n    \"cp\" : \"\(zipcodeTextfield.text!)\",\n    \"password\" : \"\(passwordTextField.text!)\",\n    \"email\" : \"\(emailTextField.text!)\"\n}"
                 UserWebService.registerUser(parameters: parameters)
+            
+            let signIn = SignInViewController.newInstance()
+            self.navigationController?.pushViewController(signIn, animated: true)
         }
         
         else{

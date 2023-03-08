@@ -44,74 +44,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
         
         
         if (mailTextField.hasText && passwordTextField.hasText){
-            
-            let parameters: [String: Any] = ["email": mailTextField,"password": passwordTextField]
+            let parameters = "{\n    \"email\" : \"\(mailTextField.text!)\",\n    \"password\" : \"\(passwordTextField.text!)\"\n}"
                 UserWebService.loginUser(parameters: parameters)
-            let tabBarController = UITabBarController()
-            tabBarController.tabBar.backgroundColor = .white
-            tabBarController.tabBar.tintColor = hexStringToUIColor(hex: "#a5ce63")
             
-            
-            let homepageViewController = HomepageViewController()
-            homepageViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.homepage", comment: "")
-            homepageViewController.tabBarItem.image = resizeImage(image: UIImage(named: "homepage")!, targetSize: CGSizeMake(27.0, 27.0))
-            
-            let trainingViewController = TrainingViewController()
-            trainingViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.training", comment: "")
-            trainingViewController.tabBarItem.image = resizeImage(image: UIImage(named: "dumbbell")!, targetSize: CGSizeMake(27.0, 27.0))
-            
-            let nutritionViewController = NutritionViewController()
-            nutritionViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.nutrition", comment: "")
-            nutritionViewController.tabBarItem.image = resizeImage(image: UIImage(named: "nutrition")!, targetSize: CGSizeMake(27.0, 27.0))
-            
-            let favoritesViewController = FavoritesViewController()
-            favoritesViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.favorites", comment: "")
-            favoritesViewController.tabBarItem.image = resizeImage(image: UIImage(named: "favorites-star")!, targetSize: CGSizeMake(27.0, 27.0))
-            
-            tabBarController.viewControllers = [
-                homepageViewController,
-                trainingViewController,
-                nutritionViewController,
-                favoritesViewController
-            ]
-            
-            self.navigationController?.pushViewController(tabBarController,animated: true)
+            tabNextViews()
         }
         
         else{
             print("MARCHE PAS")
         }
-        /*
-        let tabBarController = UITabBarController()
-        tabBarController.tabBar.backgroundColor = .white
-        tabBarController.tabBar.tintColor = hexStringToUIColor(hex: "#a5ce63")
-        
-        
-        let homepageViewController = HomepageViewController()
-        homepageViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.homepage", comment: "")
-        homepageViewController.tabBarItem.image = resizeImage(image: UIImage(named: "homepage")!, targetSize: CGSizeMake(27.0, 27.0))
-        
-        let trainingViewController = TrainingViewController()
-        trainingViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.training", comment: "")
-        trainingViewController.tabBarItem.image = resizeImage(image: UIImage(named: "dumbbell")!, targetSize: CGSizeMake(27.0, 27.0))
-        
-        let nutritionViewController = NutritionViewController()
-        nutritionViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.nutrition", comment: "")
-        nutritionViewController.tabBarItem.image = resizeImage(image: UIImage(named: "nutrition")!, targetSize: CGSizeMake(27.0, 27.0))
-        
-        let favoritesViewController = FavoritesViewController()
-        favoritesViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.favorites", comment: "")
-        favoritesViewController.tabBarItem.image = resizeImage(image: UIImage(named: "favorites-star")!, targetSize: CGSizeMake(27.0, 27.0))
-        
-        tabBarController.viewControllers = [
-            homepageViewController,
-            trainingViewController,
-            nutritionViewController,
-            favoritesViewController
-        ]
-        
-        self.navigationController?.pushViewController(tabBarController,animated: true)
-         */
     }
     
     @objc func handleTapOnView(gesture: UITapGestureRecognizer) {
@@ -145,6 +86,38 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
             self.connectionButton.isEnabled = false
         }
         return true
+    }
+    
+    func tabNextViews(){
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundColor = .white
+        tabBarController.tabBar.tintColor = hexStringToUIColor(hex: "#a5ce63")
+        
+        
+        let homepageViewController = HomepageViewController()
+        homepageViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.homepage", comment: "")
+        homepageViewController.tabBarItem.image = resizeImage(image: UIImage(named: "homepage")!, targetSize: CGSizeMake(27.0, 27.0))
+        
+        let trainingViewController = TrainingViewController()
+        trainingViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.training", comment: "")
+        trainingViewController.tabBarItem.image = resizeImage(image: UIImage(named: "dumbbell")!, targetSize: CGSizeMake(27.0, 27.0))
+        
+        let nutritionViewController = NutritionViewController()
+        nutritionViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.nutrition", comment: "")
+        nutritionViewController.tabBarItem.image = resizeImage(image: UIImage(named: "nutrition")!, targetSize: CGSizeMake(27.0, 27.0))
+        
+        let favoritesViewController = FavoritesViewController()
+        favoritesViewController.tabBarItem.title = NSLocalizedString("controllers.tabbar.favorites", comment: "")
+        favoritesViewController.tabBarItem.image = resizeImage(image: UIImage(named: "favorites-star")!, targetSize: CGSizeMake(27.0, 27.0))
+        
+        tabBarController.viewControllers = [
+            homepageViewController,
+            trainingViewController,
+            nutritionViewController,
+            favoritesViewController
+        ]
+        
+        self.navigationController?.pushViewController(tabBarController,animated: true)
     }
     
 }
