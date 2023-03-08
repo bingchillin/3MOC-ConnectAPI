@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomepageViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="logoutBtn" destination="vpc-AR-i5c" id="9iA-kW-ad3"/>
+                <outlet property="programLbl" destination="uI8-qr-8pb" id="fxU-kB-ewj"/>
+                <outlet property="recipeLbl" destination="7Ea-R9-GRy" id="5a2-0Y-cwG"/>
+                <outlet property="suggestLbl" destination="7iR-1T-kZO" id="gLQ-Xc-TBS"/>
+                <outlet property="todayLbl" destination="jJc-PT-Ffx" id="JgU-05-z7W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -149,12 +154,24 @@
                         <constraint firstItem="aEE-eU-9J5" firstAttribute="top" secondItem="KBs-kW-jDw" secondAttribute="top" constant="20" id="oYC-3R-oMH"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpc-AR-i5c">
+                    <rect key="frame" x="241" y="170" width="136" height="30"/>
+                    <color key="tintColor" red="0.62356505100000004" green="0.1533538415" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Deconnexion">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="handleLogout:" destination="-1" eventType="touchUpInside" id="FTg-5G-DJf"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="deH-qH-wtS" firstAttribute="top" secondItem="7iR-1T-kZO" secondAttribute="bottom" constant="30" id="6FS-m9-x91"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KBs-kW-jDw" secondAttribute="trailing" constant="25" id="6a0-iM-VrE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vpc-AR-i5c" secondAttribute="trailing" constant="16" id="7eF-ae-M6l"/>
                 <constraint firstItem="pO3-KE-7Ka" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="8FY-4u-dn0"/>
                 <constraint firstItem="yRo-a7-AHI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9F8-sm-aV4"/>
                 <constraint firstItem="uI8-qr-8pb" firstAttribute="top" secondItem="deH-qH-wtS" secondAttribute="bottom" constant="30" id="9W5-gi-mQg"/>
@@ -163,6 +180,7 @@
                 <constraint firstItem="uI8-qr-8pb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Lz3-Z4-6zu"/>
                 <constraint firstItem="yRo-a7-AHI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PXE-CI-vdF"/>
                 <constraint firstItem="pO3-KE-7Ka" firstAttribute="top" secondItem="uI8-qr-8pb" secondAttribute="bottom" constant="30" id="PZ2-eF-TjD"/>
+                <constraint firstItem="tbv-nz-gwQ" firstAttribute="top" secondItem="vpc-AR-i5c" secondAttribute="bottom" constant="46" id="PiB-pE-XUP"/>
                 <constraint firstItem="yRo-a7-AHI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vgi-YM-aiH"/>
                 <constraint firstItem="7Ea-R9-GRy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="WHj-33-YKA"/>
                 <constraint firstItem="tbv-nz-gwQ" firstAttribute="top" secondItem="7iR-1T-kZO" secondAttribute="bottom" constant="30" id="WOz-Fh-cio"/>
@@ -170,12 +188,14 @@
                 <constraint firstItem="7Ea-R9-GRy" firstAttribute="top" secondItem="pO3-KE-7Ka" secondAttribute="bottom" constant="30" id="am8-6s-Ei3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KBs-kW-jDw" secondAttribute="bottom" constant="30" id="cNz-v6-o9W"/>
                 <constraint firstItem="KBs-kW-jDw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="ed3-tB-e63"/>
+                <constraint firstItem="vpc-AR-i5c" firstAttribute="leading" secondItem="7iR-1T-kZO" secondAttribute="trailing" constant="39" id="jCR-xR-enK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pO3-KE-7Ka" secondAttribute="trailing" constant="25" id="kne-Iv-Ymz"/>
+                <constraint firstItem="vpc-AR-i5c" firstAttribute="top" secondItem="yRo-a7-AHI" secondAttribute="bottom" constant="8" symbolic="YES" id="mke-rH-7Wk"/>
                 <constraint firstItem="KBs-kW-jDw" firstAttribute="top" secondItem="7Ea-R9-GRy" secondAttribute="bottom" constant="30" id="qQN-uC-CFt"/>
                 <constraint firstItem="deH-qH-wtS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="rMG-v5-lcL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yRo-a7-AHI" secondAttribute="bottom" constant="656" id="wF9-cJ-n5E"/>
             </constraints>
-            <point key="canvasLocation" x="84" y="21"/>
+            <point key="canvasLocation" x="83.206106870229007" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

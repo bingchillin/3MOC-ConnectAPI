@@ -45,6 +45,9 @@
 "topbar.today" = "Today";
 "topbar.logout" = "Logout";
 
+//HOMEPAGE
+
+"controllers.mainpages.homepage" = "Suggestion of the Day";
 //TRAINING
 
 "controllers.mainpages.training.program" = "My Programs";

@@ -45,6 +45,10 @@
 "topbar.today" = "Aujourd'hui";
 "topbar.logout" = "Deconnexion";
 
+//HOMEPAGE
+
+"controllers.mainpages.homepage" = "Suggestion of the Day";
+
 //TRAINING
 
 "controllers.mainpages.training.program" = "Mes programmes";
