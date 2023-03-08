@@ -74,6 +74,7 @@ class UserWebService {
             return
           }
           print(String(data: data, encoding: .utf8)!)
+            /*
             let defaults = UserDefaults.standard
 
             defaults.set(data, forKey: "userId")
@@ -82,15 +83,14 @@ class UserWebService {
             if test != defaults.string(forKey: "userId") {
                 print(test)
             }
+             */
         }
-
-
 
         task.resume()
     }
-    
+
     class func logoutUser() {
-        
+
         guard let userURL = URL(string: "http://localhost:8888/api/controllers/login/post.php") else {
                     print("Not found LoginOut URL")
                     return
@@ -110,7 +110,6 @@ class UserWebService {
           }
           print(String(data: data, encoding: .utf8)!)
         }
-
         task.resume()
     }
     

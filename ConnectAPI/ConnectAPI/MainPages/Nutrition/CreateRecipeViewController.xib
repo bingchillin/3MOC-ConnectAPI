@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateRecipeViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="createBtn" destination="PZj-Vg-vgd" id="d6k-k1-Kow"/>
+                <outlet property="creationLbl" destination="BEb-sL-sda" id="vMS-nT-DFH"/>
+                <outlet property="descriptionTextField" destination="phe-lT-UFE" id="cuP-X9-c6c"/>
+                <outlet property="nameTextField" destination="mDA-u7-U2u" id="mV0-tf-LVK"/>
+                <outlet property="timerTextField" destination="J6x-pA-FdQ" id="ZMg-ai-VhX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
