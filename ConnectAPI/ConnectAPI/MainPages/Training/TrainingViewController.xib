@@ -11,8 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
+                <outlet property="allProgramlbl" destination="gci-DO-i6R" id="sSb-iL-PC4"/>
                 <outlet property="logoutBtn" destination="WP8-X0-Ycu" id="RuD-a2-lgO"/>
                 <outlet property="photoTableView" destination="y49-0L-xeQ" id="cpl-64-Fha"/>
+                <outlet property="programLbl" destination="rOX-bI-m46" id="k5S-IW-yZP"/>
+                <outlet property="todayLbl" destination="X75-YP-45B" id="GcV-L2-itc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -72,7 +75,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-X0-Ycu">
-                    <rect key="frame" x="306" y="151" width="86.666666666666686" height="30"/>
+                    <rect key="frame" x="249.66666666666663" y="151" width="143" height="30"/>
                     <color key="tintColor" red="0.62356505100000004" green="0.1533538415" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Deconnexion">
@@ -97,9 +100,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gmx-El-13A" secondAttribute="bottom" constant="675" id="Don-GQ-rem"/>
                 <constraint firstItem="gci-DO-i6R" firstAttribute="top" secondItem="H2X-NJ-LzE" secondAttribute="bottom" constant="30" id="ODp-V3-RnO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WP8-X0-Ycu" secondAttribute="trailing" constant="0.33000000000000002" id="SsJ-A9-cmy"/>
-                <constraint firstItem="WP8-X0-Ycu" firstAttribute="leading" secondItem="rOX-bI-m46" secondAttribute="trailing" constant="116.67" id="T0R-ev-Wux"/>
                 <constraint firstItem="H2X-NJ-LzE" firstAttribute="top" secondItem="rOX-bI-m46" secondAttribute="bottom" constant="30" id="UZx-Kn-9Ai"/>
                 <constraint firstItem="y49-0L-xeQ" firstAttribute="top" secondItem="gci-DO-i6R" secondAttribute="bottom" constant="30" id="Yo7-fF-OzW"/>
+                <constraint firstItem="WP8-X0-Ycu" firstAttribute="leading" secondItem="rOX-bI-m46" secondAttribute="trailing" constant="60.329999999999998" id="ZJy-x5-H9g"/>
                 <constraint firstItem="y49-0L-xeQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dcm-8r-rqd"/>
                 <constraint firstAttribute="bottom" secondItem="y49-0L-xeQ" secondAttribute="bottom" id="fTz-fJ-0BB"/>
                 <constraint firstAttribute="trailing" secondItem="y49-0L-xeQ" secondAttribute="trailing" id="i7t-Kx-H5R"/>
