@@ -55,3 +55,14 @@ func hexStringToUIColor (hex:String) -> UIColor {
         alpha: CGFloat(1.0)
     )
 }
+
+@IBDesignable
+class CardView: UIView {
+
+    @IBInspectable var cornerRadius: CGFloat = 2
+
+    override func layoutSubviews() {
+        layer.cornerRadius = cornerRadius
+    }
+
+}
