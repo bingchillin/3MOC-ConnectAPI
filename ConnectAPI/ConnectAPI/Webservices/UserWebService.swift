@@ -73,17 +73,26 @@ class UserWebService {
             print(String(describing: error))
             return
           }
-          print(String(data: data, encoding: .utf8)!)
-            /*
-            let defaults = UserDefaults.standard
-
-            defaults.set(data, forKey: "userId")
-            defaults.synchronize()
-            let test = "1"
-            if test != defaults.string(forKey: "userId") {
-                print(test)
+            
+          //print(String(data: data, encoding: .utf8)!)
+            
+            if let responseString = String(data: data, encoding: .utf8) {
+                
+                guard let jsonData = responseString.data(using: .utf8) else {
+                    print("Erreur lors de la conversion de la chaîne en données JSON")
+                    return
+                }
+                
+                do {
+                    if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+                        if let id = jsonObject["id"] as? String {
+                            print(id)
+                        }
+                    }
+                } catch {
+                    print("Erreur lors de l'analyse de la réponse JSON : \(error.localizedDescription)")
+                }
             }
-             */
         }
 
         task.resume()
