@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingViewController" customModule="ConnectAPI" customModuleProvider="target">
             <connections>
                 <outlet property="iconBackgroundView" destination="Ne0-oU-df5" id="Ck8-wb-pqy"/>
+                <outlet property="photoTableView" destination="y49-0L-xeQ" id="cpl-64-Fha"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

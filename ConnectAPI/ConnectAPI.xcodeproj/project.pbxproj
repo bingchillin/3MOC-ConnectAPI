@@ -25,6 +25,8 @@
 		D754E05F297C23B400E2EA58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754E05D297C23B400E2EA58 /* SignUpViewController.swift */; };
 		D754E060297C23B400E2EA58 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D754E05E297C23B400E2EA58 /* SignUpViewController.xib */; };
 		D7A02AE929B7F66800DD4EDF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A02AE829B7F66800DD4EDF /* CardView.swift */; };
+		D7A02AEC29B8040F00DD4EDF /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A02AEA29B8040F00DD4EDF /* PhotoTableViewCell.swift */; };
+		D7A02AED29B8040F00DD4EDF /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A02AEB29B8040F00DD4EDF /* PhotoTableViewCell.xib */; };
 		D7D6B74F297C2F2300133E97 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6B74D297C2F2300133E97 /* SignInViewController.swift */; };
 		D7D6B750297C2F2300133E97 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B74E297C2F2300133E97 /* SignInViewController.xib */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,8 @@
 		D754E05D297C23B400E2EA58 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D754E05E297C23B400E2EA58 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		D7A02AE829B7F66800DD4EDF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D7A02AEA29B8040F00DD4EDF /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		D7A02AEB29B8040F00DD4EDF /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		D7D6B74D297C2F2300133E97 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D7D6B74E297C2F2300133E97 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +78,6 @@
 				2D88F1232995306900D5CA79 /* Nutrition */,
 				2D88F11E29952D2000D5CA79 /* Training */,
 				2D88F11D29952D1500D5CA79 /* Homepage */,
-				D7A02AE829B7F66800DD4EDF /* CardView.swift */,
 			);
 			path = MainPages;
 			sourceTree = "<group>";
@@ -93,6 +96,8 @@
 			children = (
 				2D88F11F29952D3C00D5CA79 /* TrainingViewController.swift */,
 				2D88F12029952D3C00D5CA79 /* TrainingViewController.xib */,
+				D7A02AEA29B8040F00DD4EDF /* PhotoTableViewCell.swift */,
+				D7A02AEB29B8040F00DD4EDF /* PhotoTableViewCell.xib */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 				D754E05C297C239100E2EA58 /* Sign Up */,
 				D754E05B297C237A00E2EA58 /* Home */,
 				2DEB1061296F43A0008BE20D /* AppDelegate.swift */,
+				D7A02AE829B7F66800DD4EDF /* CardView.swift */,
 				2D88F1322995329600D5CA79 /* Localizable.strings */,
 				2DEB106C296F43A0008BE20D /* LaunchScreen.storyboard */,
 				2DEB106A296F43A0008BE20D /* Assets.xcassets */,
@@ -243,6 +249,7 @@
 				D754E060297C23B400E2EA58 /* SignUpViewController.xib in Resources */,
 				2D88F11C29952C0000D5CA79 /* HomepageViewController.xib in Resources */,
 				2DEB1078296F4509008BE20D /* HomeViewController.xib in Resources */,
+				D7A02AED29B8040F00DD4EDF /* PhotoTableViewCell.xib in Resources */,
 				2D88F1272995308800D5CA79 /* NutritionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +271,7 @@
 				2DEB1062296F43A0008BE20D /* AppDelegate.swift in Sources */,
 				2DEB1077296F4509008BE20D /* HomeViewController.swift in Sources */,
 				2D88F11B29952C0000D5CA79 /* HomepageViewController.swift in Sources */,
+				D7A02AEC29B8040F00DD4EDF /* PhotoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

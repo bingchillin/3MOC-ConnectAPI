@@ -8,7 +8,8 @@
 import UIKit
 
 class TrainingViewController: UIViewController {
-    
+
+    @IBOutlet weak var photoTableView: UITableView!
     @IBOutlet weak var iconBackgroundView: UIView!
     
     class func newInstance() -> TrainingViewController {
@@ -22,6 +23,19 @@ class TrainingViewController: UIViewController {
         iconBackgroundView.layer.cornerRadius = 20
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        self.photoTableView.dataSource = self
+//        self.photoTableView.delegate = self
+//        let photoCellNib = UINib(nibName: "PhotoTableViewCell", bundle: nil) // nib correspond à un xib compilé
+//        self.photoTableView.register(photoCellNib, forCellReuseIdentifier: "PhotoCellId") // identifiant permettant de générer ce type de cellule
+        
+//        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            return self.photos?.count ?? 0
+//        }
+//
+//        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCellId", for: indexPath) as! PhotoTableViewCell
+//            cell.redraw(with: self.photos![indexPath.row])
+//            return cell
+//        }
     }
 }
