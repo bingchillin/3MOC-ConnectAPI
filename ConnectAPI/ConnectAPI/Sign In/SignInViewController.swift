@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var signInLabel: UILabel!
     @IBOutlet weak var signInDescriptionLabel: UILabel!
@@ -22,6 +22,9 @@ class SignInViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        self.mailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        
         signInLabel.text = NSLocalizedString("controllers.signin.signin", comment: "")
         signInDescriptionLabel.text = NSLocalizedString("controllers.signin.signinDescription", comment: "")
         
@@ -39,6 +42,53 @@ class SignInViewController: UIViewController {
     
     @IBAction func handleConnect(_ sender: Any) {
         
+        
+        if (mailTextField.hasText && passwordTextField.hasText){
+            let parameters = "{\n    \"email\" : \"\(mailTextField.text!)\",\n    \"password\" : \"\(passwordTextField.text!)\"\n}"
+                UserWebService.loginUser(parameters: parameters)
+            
+            tabNextViews()
+        }
+        
+        else{
+            print("MARCHE PAS")
+        }
+    }
+    
+    @objc func handleTapOnView(gesture: UITapGestureRecognizer) {
+        self.mailTextField.resignFirstResponder()
+        self.view.removeGestureRecognizer(gesture)
+    }
+    
+    // Event déclenché lorsque le clavier est disponible pour le textfield
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapOnView(gesture:)))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    // Event déclenché lorsque l'utilisateur clique sur le bouton retour
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // ferme le clavier
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("should change chars")
+        guard let NSText = textField.text as? NSString else {
+            return true
+        }
+        print("here")
+        let realText = NSText.replacingCharacters(in: range, with: string)
+        print(realText)
+        if realText.count > 0 {
+            self.connectionButton.isEnabled = true
+        } else {
+            self.connectionButton.isEnabled = false
+        }
+        return true
+    }
+    
+    func tabNextViews(){
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = .white
         tabBarController.tabBar.tintColor = hexStringToUIColor(hex: "#a5ce63")

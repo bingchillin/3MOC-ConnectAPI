@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var welcomeTitleLabel: UILabel!
@@ -35,8 +35,11 @@ class SignUpViewController: UIViewController {
     @IBAction func signUp(_ sender: UIButton) {
         if (nameTextField.hasText && lastnameTextField.hasText && passwordTextField.hasText && emailTextField.hasText && addressTextField.hasText && zipcodeTextfield.hasText && cityTextField.hasText){
             
-                let parameters: [String: Any] = ["firstname": nameTextField.text, "name": lastnameTextField.text, "address": addressTextField.text, "city": cityTextField.text, "cp": zipcodeTextfield.text, "email":emailTextField.text, "password":passwordTextField.text]
+            let parameters = "{\n    \"name\" : \"\(lastnameTextField.text!)\",\n    \"firstname\" : \"\(nameTextField.text!)\",\n    \"address\" : \"\(addressTextField.text!)\",\n    \"city\" : \"\(cityTextField.text!)\",\n    \"cp\" : \"\(zipcodeTextfield.text!)\",\n    \"password\" : \"\(passwordTextField.text!)\",\n    \"email\" : \"\(emailTextField.text!)\"\n}"
                 UserWebService.registerUser(parameters: parameters)
+            
+            let signIn = SignInViewController.newInstance()
+            self.navigationController?.pushViewController(signIn, animated: true)
         }
         
         else{
@@ -45,6 +48,7 @@ class SignUpViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         
         welcomeTitleLabel.text = NSLocalizedString("controllers.signup.welcome", comment: "")
         welcomeDescriptionLabel.text = NSLocalizedString("controllers.signup.welcomeDescription", comment: "")
@@ -61,8 +65,48 @@ class SignUpViewController: UIViewController {
         alreadyaccountLabel.text = NSLocalizedString("controllers.signup.alreadyaccount", comment: "")
         
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.nameTextField.delegate = self
+        self.lastnameTextField.delegate = self
+        self.cityTextField.delegate = self
+        self.addressTextField.delegate = self
+        self.zipcodeTextfield.delegate = self
+    }
+    
+    
+    @objc func handleTapOnView(gesture: UITapGestureRecognizer) {
+        self.emailTextField.resignFirstResponder()
+        self.view.removeGestureRecognizer(gesture)
+    }
+    
+    // Event déclenché lorsque le clavier est disponible pour le textfield
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapOnView(gesture:)))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    // Event déclenché lorsque l'utilisateur clique sur le bouton retour
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // ferme le clavier
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("should change chars")
+        guard let NSText = textField.text as? NSString else {
+            return true
+        }
+        print("here")
+        let realText = NSText.replacingCharacters(in: range, with: string)
+        print(realText)
+        if realText.count > 0 {
+            self.signupButton.isEnabled = true
+        } else {
+            self.signupButton.isEnabled = false
+        }
+        return true
     }
 
 }
