@@ -87,8 +87,7 @@ class UserWebService {
                     if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                         if let id = jsonObject["id"] as? String {
                             print(id)
-                            let defaults = UserDefaults.standard
-                            defaults.set(id, forKey: "uId")
+                            UserDefaults.standard.set(id, forKey: "uId")
                         }
                     }
                 } catch {
