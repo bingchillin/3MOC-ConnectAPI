@@ -12,10 +12,27 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet var recipeTableView: UITableView!
     var recipe: [Recipe]?
     
+    @IBOutlet weak var todayLbl: UILabel!
+    @IBOutlet weak var createBtn: UIButton!
+    @IBOutlet weak var recipeLbl: UILabel!
+    @IBOutlet weak var logoutBtn: UIButton!
+    @IBOutlet weak var allrecipeLbl: UILabel!
     @IBAction func toCreateRecipe(_ sender: Any) {
         self.navigationController?.pushViewController(CreateRecipeViewController(), animated: true)
     }
     
+    @IBAction func handleLogout(_ sender: UIButton) {
+        if (UserDefaults.standard.string(forKey: "uId") != nil){
+            let parameter = "{\n    \"id\" : \"\(UserDefaults.standard.string(forKey: "uId")!)\"\n"
+            UserWebService.logoutUser(parameters: parameter)
+            self.navigationController?.pushViewController(HomeViewController(), animated: true)
+            
+        }
+        
+        else{
+            print("MARCHE PAS")
+        }
+    }
     class func newInstance() -> NutritionViewController {
         let nutritionViewController = NutritionViewController()
         
@@ -35,6 +52,9 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewWillAppear(animated)
         RecipeWebService.getAllRecipes { recipe,err in
             var recipes = [Recipe]()
+
+        recipeLbl.text = NSLocalizedString("controllers.mainpages.nutrition.recipelabel", comment: "")
+
 
             if let recipeDictionaries = recipe as? [[String:Any]] {
                 for recipeDictionary in recipeDictionaries {
@@ -66,4 +86,5 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
         cell.redraw(with: self.recipe![indexPath.row])
         return cell
     }
+
 }

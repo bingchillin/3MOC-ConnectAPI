@@ -40,8 +40,24 @@
 "controllers.signup.signUpButton" = "S'inscrire";
 "controllers.signup.alreadyaccount" = "Vous avez déjà un compte ? Connectez-vous";
 
+// TOP BAR
+
+"topbar.today" = "Aujourd'hui";
+"topbar.logout" = "Deconnexion";
+
+//TRAINING
+
+"controllers.mainpages.training.program" = "Mes programmes";
+"controllers.mainpages.training.allprogram" = "Les programmes JYM";
+
 
 // NUTRITION
+
+"controllers.mainpages.nutrition.createbutton" = "Créer";
+"controllers.mainpages.nutrition.recipelabel" = "Mes recettes";
+"controllers.mainpages.nutrition.allrecipelabel" = "Les recettes adhérents JYM";
+
+// Recette
 
 "controllers.mainpages.nutrition.createrecipe.name" = "Nom de la recette";
 "controllers.mainpages.nutrition.createrecipe.timer" = "Temps de préparation";
@@ -50,4 +66,14 @@
 "controllers.mainpages.nutrition.createrecipe.createbutton" = "Passez aux ingrédients";
 
 "controllers.mainpages.nutrition.createrecipe.createlabel" = "Création de recette";
+
+//IngredientDetail
+
+"controllers.mainpages.nutrition.ingredientdetail.name" = "Nom de l'ingredient";
+"controllers.mainpages.nutrition.ingredientdetail.quantity" = "Quantité";
+"controllers.mainpages.nutrition.ingredientdetail.weight" = "Poids";
+
+"controllers.mainpages.nutrition.ingredientdetail.createbutton" = "Créer la recette";
+
+"controllers.mainpages.nutrition.ingredientdetail.createlabel" = "Ajout des ingrédients";
 

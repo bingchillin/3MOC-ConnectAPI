@@ -50,6 +50,9 @@
 		D7A02AF629B83A9000DD4EDF /* CreateRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A02AF429B83A9000DD4EDF /* CreateRecipeViewController.xib */; };
 		D7A02AF929B83EEA00DD4EDF /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A02AF729B83EEA00DD4EDF /* IngredientsViewController.swift */; };
 		D7A02AFA29B83EEA00DD4EDF /* IngredientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A02AF829B83EEA00DD4EDF /* IngredientsViewController.xib */; };
+		D7A02B1329B8541000DD4EDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A02B1129B8541000DD4EDF /* AboutViewController.swift */; };
+		D7A02B1429B8541000DD4EDF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A02B1229B8541000DD4EDF /* AboutViewController.xib */; };
+		D7A02B1629B85CA500DD4EDF /* rizzler.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D7A02B1529B85CA500DD4EDF /* rizzler.mp4 */; };
 		D7D6B74F297C2F2300133E97 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6B74D297C2F2300133E97 /* SignInViewController.swift */; };
 		D7D6B750297C2F2300133E97 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B74E297C2F2300133E97 /* SignInViewController.xib */; };
 /* End PBXBuildFile section */
@@ -102,6 +105,9 @@
 		D7A02AF429B83A9000DD4EDF /* CreateRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRecipeViewController.xib; sourceTree = "<group>"; };
 		D7A02AF729B83EEA00DD4EDF /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		D7A02AF829B83EEA00DD4EDF /* IngredientsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsViewController.xib; sourceTree = "<group>"; };
+		D7A02B1129B8541000DD4EDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D7A02B1229B8541000DD4EDF /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		D7A02B1529B85CA500DD4EDF /* rizzler.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rizzler.mp4; sourceTree = "<group>"; };
 		D7D6B74D297C2F2300133E97 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D7D6B74E297C2F2300133E97 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +165,7 @@
 		2D88F11829952BE100D5CA79 /* MainPages */ = {
 			isa = PBXGroup;
 			children = (
+				D7A02B1029B8540500DD4EDF /* About */,
 				2D88F1282995309800D5CA79 /* Favorites */,
 				2D88F1232995306900D5CA79 /* Nutrition */,
 				2D88F11E29952D2000D5CA79 /* Training */,
@@ -265,6 +272,16 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
+		D7A02B1029B8540500DD4EDF /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D7A02B1129B8541000DD4EDF /* AboutViewController.swift */,
+				D7A02B1529B85CA500DD4EDF /* rizzler.mp4 */,
+				D7A02B1229B8541000DD4EDF /* AboutViewController.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		D7D6B74C297C2F0A00133E97 /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,7 +358,11 @@
 				D7A02AFA29B83EEA00DD4EDF /* IngredientsViewController.xib in Resources */,
 				2D88F1302995329600D5CA79 /* Localizable.strings in Resources */,
 				B95D407929B85DD300BFBDE9 /* RecipeTableViewCell.xib in Resources */,
+
+				D7A02B1629B85CA500DD4EDF /* rizzler.mp4 in Resources */,
+
 				D754E060297C23B400E2EA58 /* SignUpViewController.xib in Resources */,
+				D7A02B1429B8541000DD4EDF /* AboutViewController.xib in Resources */,
 				2D88F11C29952C0000D5CA79 /* HomepageViewController.xib in Resources */,
 				2DEB1078296F4509008BE20D /* HomeViewController.xib in Resources */,
 				D7A02AF029B8304500DD4EDF /* PhotoTableViewCell.xib in Resources */,
@@ -365,6 +386,7 @@
 				2D770ADD29B7E9340017EE53 /* IngredientFactory.swift in Sources */,
 				2D770AE529B7EFAA0017EE53 /* DetailPlan.swift in Sources */,
 				2D88F13529953A5200D5CA79 /* Utils.swift in Sources */,
+				D7A02B1329B8541000DD4EDF /* AboutViewController.swift in Sources */,
 				D7A02AF929B83EEA00DD4EDF /* IngredientsViewController.swift in Sources */,
 				B95D407829B85DD300BFBDE9 /* RecipeTableViewCell.swift in Sources */,
 				2D88F12B299530A800D5CA79 /* FavoritesViewController.swift in Sources */,
