@@ -66,6 +66,9 @@
                     <rect key="frame" x="25" y="381" width="343" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Passer aux ingrédients"/>
+                    <connections>
+                        <action selector="toIngredients:" destination="-1" eventType="touchUpInside" id="Y2X-Mc-uEq"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

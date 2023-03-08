@@ -9,6 +9,10 @@ import UIKit
 
 class CreateRecipeViewController: UIViewController {
 
+    @IBAction func toIngredients(_ sender: Any) {
+        self.navigationController?.pushViewController(IngredientsViewController(), animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

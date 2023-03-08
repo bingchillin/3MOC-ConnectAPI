@@ -9,6 +9,9 @@ import UIKit
 
 class NutritionViewController: UIViewController {
     
+    @IBAction func toCreateRecipe(_ sender: Any) {
+        self.navigationController?.pushViewController(CreateRecipeViewController(), animated: true)
+    }
     
     class func newInstance() -> NutritionViewController {
         let nutritionViewController = NutritionViewController()
