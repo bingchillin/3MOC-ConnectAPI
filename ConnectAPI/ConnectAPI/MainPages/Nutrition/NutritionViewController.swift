@@ -53,7 +53,7 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
         RecipeWebService.getAllRecipes { recipe,err in
             var recipes = [Recipe]()
 
-        recipeLbl.text = NSLocalizedString("controllers.mainpages.nutrition.recipelabel", comment: "")
+            self.recipeLbl.text = NSLocalizedString("controllers.mainpages.nutrition.recipelabel", comment: "")
 
 
             if let recipeDictionaries = recipe as? [[String:Any]] {

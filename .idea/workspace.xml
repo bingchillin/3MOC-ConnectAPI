@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9969504c-3c3f-4c0c-9804-04a9b40c5fea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Nutrition/NutritionViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Nutrition/NutritionViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Nutrition/NutritionViewController.xib" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Nutrition/NutritionViewController.xib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Training/TrainingViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Training/TrainingViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Training/TrainingViewController.xib" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/MainPages/Training/TrainingViewController.xib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/en.lproj/Localizable.strings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectAPI/ConnectAPI/fr.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,7 @@
       <workItem from="1678220542383" duration="2274000" />
       <workItem from="1678229904146" duration="63000" />
       <workItem from="1678229969483" duration="7000000" />
-      <workItem from="1678245061896" duration="5359000" />
+      <workItem from="1678245061896" duration="6088000" />
     </task>
     <servers />
   </component>
