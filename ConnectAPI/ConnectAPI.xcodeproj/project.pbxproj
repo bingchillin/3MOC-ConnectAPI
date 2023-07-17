@@ -53,6 +53,11 @@
 		D7A02B1329B8541000DD4EDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A02B1129B8541000DD4EDF /* AboutViewController.swift */; };
 		D7A02B1429B8541000DD4EDF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A02B1229B8541000DD4EDF /* AboutViewController.xib */; };
 		D7A02B1629B85CA500DD4EDF /* rizzler.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D7A02B1529B85CA500DD4EDF /* rizzler.mp4 */; };
+		D7A4B3432A226F180036BEFE /* Poubelle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4B3422A226F180036BEFE /* Poubelle.swift */; };
+		D7B703C12A2744C100D594A5 /* RDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B703BF2A2744C100D594A5 /* RDVViewController.swift */; };
+		D7B703C22A2744C100D594A5 /* RDVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B703C02A2744C100D594A5 /* RDVViewController.xib */; };
+		D7B703C52A277DD000D594A5 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B703C32A277DD000D594A5 /* ConfirmViewController.swift */; };
+		D7B703C62A277DD000D594A5 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B703C42A277DD000D594A5 /* ConfirmViewController.xib */; };
 		D7D6B74F297C2F2300133E97 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6B74D297C2F2300133E97 /* SignInViewController.swift */; };
 		D7D6B750297C2F2300133E97 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B74E297C2F2300133E97 /* SignInViewController.xib */; };
 /* End PBXBuildFile section */
@@ -108,6 +113,11 @@
 		D7A02B1129B8541000DD4EDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D7A02B1229B8541000DD4EDF /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		D7A02B1529B85CA500DD4EDF /* rizzler.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rizzler.mp4; sourceTree = "<group>"; };
+		D7A4B3422A226F180036BEFE /* Poubelle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poubelle.swift; sourceTree = "<group>"; };
+		D7B703BF2A2744C100D594A5 /* RDVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVViewController.swift; sourceTree = "<group>"; };
+		D7B703C02A2744C100D594A5 /* RDVViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDVViewController.xib; sourceTree = "<group>"; };
+		D7B703C32A277DD000D594A5 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		D7B703C42A277DD000D594A5 /* ConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
 		D7D6B74D297C2F2300133E97 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D7D6B74E297C2F2300133E97 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +247,7 @@
 		2DEB1060296F43A0008BE20D /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D7B703BE2A2744A900D594A5 /* RDV */,
 				2D770AD729B7E6590017EE53 /* Webservices */,
 				2D770AD629B7E64B0017EE53 /* Factories */,
 				2D770AC929B7DF610017EE53 /* Models */,
@@ -250,6 +261,7 @@
 				2DEB106A296F43A0008BE20D /* Assets.xcassets */,
 				2DEB106F296F43A0008BE20D /* Info.plist */,
 				2D88F13429953A5200D5CA79 /* Utils.swift */,
+				D7A4B3422A226F180036BEFE /* Poubelle.swift */,
 			);
 			path = ConnectAPI;
 			sourceTree = "<group>";
@@ -280,6 +292,17 @@
 				D7A02B1229B8541000DD4EDF /* AboutViewController.xib */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		D7B703BE2A2744A900D594A5 /* RDV */ = {
+			isa = PBXGroup;
+			children = (
+				D7B703BF2A2744C100D594A5 /* RDVViewController.swift */,
+				D7B703C02A2744C100D594A5 /* RDVViewController.xib */,
+				D7B703C32A277DD000D594A5 /* ConfirmViewController.swift */,
+				D7B703C42A277DD000D594A5 /* ConfirmViewController.xib */,
+			);
+			path = RDV;
 			sourceTree = "<group>";
 		};
 		D7D6B74C297C2F0A00133E97 /* Sign In */ = {
@@ -356,6 +379,7 @@
 				2DEB106B296F43A0008BE20D /* Assets.xcassets in Resources */,
 				2D88F12C299530A800D5CA79 /* FavoritesViewController.xib in Resources */,
 				D7A02AFA29B83EEA00DD4EDF /* IngredientsViewController.xib in Resources */,
+				D7B703C22A2744C100D594A5 /* RDVViewController.xib in Resources */,
 				2D88F1302995329600D5CA79 /* Localizable.strings in Resources */,
 				B95D407929B85DD300BFBDE9 /* RecipeTableViewCell.xib in Resources */,
 				D7A02B1629B85CA500DD4EDF /* rizzler.mp4 in Resources */,
@@ -366,6 +390,7 @@
 				D7A02AF029B8304500DD4EDF /* PhotoTableViewCell.xib in Resources */,
 				D7A02AF629B83A9000DD4EDF /* CreateRecipeViewController.xib in Resources */,
 				2D88F1272995308800D5CA79 /* NutritionViewController.xib in Resources */,
+				D7B703C62A277DD000D594A5 /* ConfirmViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +406,8 @@
 				2D770AD329B7E2D30017EE53 /* Favorite.swift in Sources */,
 				2D770AD129B7E1C20017EE53 /* Ingredient_detail.swift in Sources */,
 				2D88F12129952D3C00D5CA79 /* TrainingViewController.swift in Sources */,
+				D7B703C52A277DD000D594A5 /* ConfirmViewController.swift in Sources */,
+				D7A4B3432A226F180036BEFE /* Poubelle.swift in Sources */,
 				2D770ADD29B7E9340017EE53 /* IngredientFactory.swift in Sources */,
 				2D770AE529B7EFAA0017EE53 /* DetailPlan.swift in Sources */,
 				2D88F13529953A5200D5CA79 /* Utils.swift in Sources */,
@@ -400,6 +427,7 @@
 				2D770ACB29B7DF700017EE53 /* User.swift in Sources */,
 				2D88F11B29952C0000D5CA79 /* HomepageViewController.swift in Sources */,
 				2D770AE929B7F2930017EE53 /* TrainingPlanFactory.swift in Sources */,
+				D7B703C12A2744C100D594A5 /* RDVViewController.swift in Sources */,
 				2D770ADF29B7EBB70017EE53 /* Ingredient_detailFactory.swift in Sources */,
 				2D770AE729B7F1BE0017EE53 /* Exercise.swift in Sources */,
 				2D770AE329B7EEFA0017EE53 /* TrainingPlan.swift in Sources */,

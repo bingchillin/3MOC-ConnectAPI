@@ -59,10 +59,29 @@ func hexStringToUIColor (hex:String) -> UIColor {
 @IBDesignable
 class CardView: UIView {
 
-    @IBInspectable var cornerRadius: CGFloat = 10
+    @IBInspectable var cornerRadius: CGFloat = 20
 
     override func layoutSubviews() {
         layer.cornerRadius = cornerRadius
+
+        layer.shadowOpacity = 0.3
+        layer.shadowOffset = CGSize(width: 5, height: 5)
     }
 
+}
+
+
+
+@IBDesignable
+class MainView: UIView {
+
+    @IBInspectable var cornerRadius: CGFloat = 20
+
+    override func layoutSubviews() {
+        layer.cornerRadius = cornerRadius
+
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        //layer.shadowColor = UIColor.blue.cgColor
+    }
 }

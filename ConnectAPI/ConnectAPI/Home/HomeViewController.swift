@@ -8,24 +8,22 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-
-    @IBOutlet weak var SignInButton: UIButton!
-    @IBOutlet weak var SignUpButton: UIButton!
+    @IBOutlet weak var currentMissionView: CardView!
+    @IBOutlet weak var currentMissionTitle: UILabel!
+    @IBOutlet weak var currentMissionLabel: UILabel!
     
-    @IBAction func toSignIn(_ sender: Any) {
-        let signIn = SignInViewController.newInstance()
-        self.navigationController?.pushViewController(signIn, animated: true)
-    }
-    @IBAction func toSignUp(_ sender: Any) {
-        let signUp = SignUpViewController.newInstance()
-        self.navigationController?.pushViewController(signUp, animated: true)
-    }
+    let choice = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SignUpButton.setTitle(NSLocalizedString("controllers.home.signup", comment: ""), for: .normal)
-        SignInButton.setTitle(NSLocalizedString("controllers.home.signin", comment: ""), for: .normal)
-
+        
+        if choice == 1 {
+            currentMissionView.backgroundColor = UIColor(named: "backgroundBlue")
+            currentMissionLabel.text = "Mission 1"
+        } else {
+            currentMissionLabel.text = "VOUS N'AVEZ PAS DE MISSION EN COURS"
+        }
+        
     }
+    
 }
